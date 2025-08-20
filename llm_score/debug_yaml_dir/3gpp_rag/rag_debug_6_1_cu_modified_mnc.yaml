@@ -1,0 +1,13 @@
+- stage: cu_init
+  type: CU
+  symptom: "Invalid Mobile Network Code (MNC) value in CU configuration."
+  log_snippet:
+    - "[CONFIG] config_check_intrange: mnc: 1000 invalid value, authorized range: 0 999"
+  related_config:
+    - "plmn_list.mnc"
+  notes: |
+    The failure occurs during the gNB-CU's initial configuration parsing stage. The OAI configuration module checks the validity of parameters before proceeding with the initialization of protocol stacks.
+
+    The log indicates that the provided Mobile Network Code (MNC) value of `1000` is invalid. The MNC is a component of the Public Land Mobile Network (PLMN) ID, which is broadcast in System Information Block 1 (SIB1) and is essential for network identification.
+
+    According to 3GPP TS 23.003, an MNC consists of 2 or 3 digits. This translates to a numerical range of 0 to 999. The configured value `1000` is outside this standard-defined range. The OAI gNB's internal configuration checker (`config_check_intrange`) enforces this constraint, leading to a fatal error and preventing the CU from starting. This check happens before the RRC or NGAP layers are initialized, as a valid PLMN is a prerequisite for their operation.

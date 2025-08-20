@@ -1,0 +1,17 @@
+- stage: du_init
+  type: DU
+  symptom: Failed to attach device on primary process
+  log_snippet:
+    - "EAL: Failed to attach device on primary process"
+  related_config:
+    - fhi_72.dpdk_devices
+  notes: |
+    In the O-RAN architecture, the DU (Distributed Unit) is responsible for the radio access network functions, including the physical layer (PHY), medium access control (MAC), and the radio resource control (RRC). The DU's initialization process involves attaching the necessary hardware devices, such as the fhir (FPGA-based Hardware-in-the-Loop) devices, which are used for emulation and testing purposes.
+
+    In this case, the failure is related to the DU's inability to attach the fhir_72 device, which is part of the fhi_72.dpdk_devices configuration. This could be due to several reasons, such as the device not being properly initialized, the device being in an incorrect state, or a misconfiguration in the OAI (Open Air Interface) configuration.
+
+    The error log snippet indicates a failure during the DU's initialization process, specifically during the attachment of the fhir_72 device. This failure could be caused by issues with the device's state, the OAI configuration, or the OAI's ability to communicate with the device.
+
+    According to 3GPP TS 38.331, the DU's initialization process involves several steps, including the attachment of the fhir device, which is part of the RRC layer. If the fhir device is not properly attached, the DU's initialization process will fail.
+
+    In conclusion, the root cause of the failure is likely related to the fhir_72 device's attachment during the DU's initialization process. Further investigation is needed to determine the exact cause of the failure, such as checking the device's state, the OAI configuration, or the OAI's ability to communicate with the device.

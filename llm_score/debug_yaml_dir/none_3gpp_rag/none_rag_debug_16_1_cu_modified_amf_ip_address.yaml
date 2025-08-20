@@ -1,0 +1,19 @@
+- stage: f1
+  type: CU
+  symptom: "SCTP connection refusal"
+  log_snippet:
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - "Active_gNBs"
+  notes: |
+    The failure in the CU initialization stage is caused by a refusal of the SCTP connection, which is part of the signaling transport protocol used by the O-RAN architecture for interconnectivity between different OAI components. According to 3GPP TS 38.331, the active gNBs must establish a successful SCTP connection to proceed with further initialization steps. The related configuration parameter, "Active_gNBs," likely contains incorrect or invalid configurations that prevent the CU from establishing a valid connection with the DU. This could be due to an incorrect IP address, port, or security credentials that do not match the DU's expectations. The root cause is the inability of the CU to communicate with the DU, which is critical for the CU to send and receive control messages necessary for the O-RAN system's operation.
+
+- stage: f1
+  type: CU
+  symptom: "SCTP connection refusal"
+  log_snippet:
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - "Active_gNBs"
+  notes: |
+    The failure in the CU initialization stage is caused by a refusal of the SCTP connection, which is part of the signaling transport protocol used by the O-RAN architecture for interconnectivity between different OAI components. According to 3GPP TS 38.331, the active gNBs must establish a successful SCTP connection to proceed with further initialization steps. The related configuration parameter, "Active_gNBs," likely contains incorrect or invalid configurations that prevent the CU from establishing a valid connection with the DU. This could be due to an incorrect IP address, port, or security credentials that do not match the DU's expectations. The root cause is the inability of the CU to communicate with the DU, which is critical for the CU to send and receive control messages necessary for the O-RAN system's operation.

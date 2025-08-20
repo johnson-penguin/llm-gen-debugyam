@@ -1,0 +1,34 @@
+🔹 Match 1 from [29303-g40] (Score: 0.7212)
+🔹 Match 2 from [38300-ge0] (Score: 0.8690)
+🔹 Match 3 from [29413-g40] (Score: 0.8802)
+
+[From 29303-g40]:
+NOTE 1: The 5G-AN (NG-RAN and N3IWF) is responsible for initiating the SCTP connectivity and setting up the NG-C association with the AMF. This requires the 5G-AN to first obtain the AMF\'s IP address(es).
+
+---
+
+[From 38300-ge0]:
+NOTE: The NG-RAN node may use different source and/or destination IP end point(s) if the SCTP establishment towards one IP end point fails.
+
+15.3.2.3 Application layer initialization
+
+---
+
+[From 29413-g40]:
+AMF CONFIGURATION UPDATE FAILURE
+
+NG RESET
+
+NG RESET ACKNOWLEDGE
+
+ERROR INDICATION
+
+AMF STATUS INDICATION
+
+OVERLOAD START
+
+OVERLOAD STOP
+
+UE TNLA BINDING RELEASE REQUEST
+
+5.3 Exceptions for NGAP message contents and information element coding when used for non-3GPP access

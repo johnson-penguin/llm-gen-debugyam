@@ -1,0 +1,40 @@
+🔹 Match 1 from [38463-gf0] (Score: 0.6725)
+🔹 Match 2 from [38463-gf0] (Score: 0.7354)
+🔹 Match 3 from [38473-gf0] (Score: 0.7354)
+
+[From 38463-gf0]:
+GNB-CU-CP-TNLA-Failed-To-Setup-List ::= SEQUENCE (SIZE(1.. maxnoofTNLAssociations)) OF GNB-CU-CP-TNLA-Failed-To-Setup-Item
+
+-- **************************************************************
+
+--
+
+-- GNB-CU-CP Configuration Update Failure
+
+--
+
+---
+
+[From 38463-gf0]:
+Figure 8.2.4.3-1: gNB-CU-CP E1 Setup procedure: Unsuccessful Operation.
+
+If the gNB-CU-UP cannot accept the setup, it shall respond with a GNB-CU-CP E1 SETUP FAILURE and appropriate cause value.
+
+---
+
+[From 38473-gf0]:
+--
+
+-- GNB-CU CONFIGURATION UPDATE ELEMENTARY PROCEDURE
+
+--
+
+-- **************************************************************
+
+-- **************************************************************
+
+--
+
+-- GNB-CU CONFIGURATION UPDATE
+
+--

@@ -1,0 +1,35 @@
+- stage: du_init
+  type: DU
+  symptom: "Invalid bandwidth index"
+  log_snippet:
+    - "Assertion (bw_index >= 0 && bw_index <= (sizeof(bandwidth_index_to_mhz)/sizeof(*(bandwidth_index_to_mhz)))) failed!"
+    - "Bandwidth index -1 is invalid"
+    - "../../../common/utils/nr/nr_common.c:398 get_supported_bw_mhz() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "dl_subcarrierSpacing"
+  notes: |
+    The DU (Distributed Unit) failed to initialize due to an invalid bandwidth index, as indicated by the assertion failure in the log snippet. This issue arises during the initialization phase where the DU is trying to set up the NR (New Radio) configuration. The error message "Bandwidth index -1 is invalid" suggests that the dl_subcarrierSpacing parameter, which is part of the NR configuration, has been set to an invalid value (-1 in this case). According to the 3GPP TS 38.401 specification, the dl_subcarrierSpacing parameter must be within a valid range as defined in the NR configuration tables. The failure to validate this parameter likely caused the OAI (Open Air Interface) softmodem to exit with an assertion error. The CU (Centralized Unit) did not report any errors, indicating that the issue is isolated to the DU's initialization process. The CU's Active_gNBs configuration does not appear to be directly related to this failure, as it pertains to the DU's ability to configure the NR bandwidth. To resolve this issue, the dl_subcarrierSpacing configuration in the DU should be checked and corrected to a valid value according to the NR specification.
+
+- stage: du_init
+  type: DU
+  symptom: "Assertion failure during NR configuration"
+  log_snippet:
+    - "Assertion (bw_index >= 0 && bw_index <= (sizeof(bandwidth_index_to_mhz)/sizeof(*(bandwidth_index_to_mhz)))) failed!"
+    - "Bandwidth index -1 is invalid"
+    - "../../../common/utils/nr/nr_common.c:398 get_supported_bw_mhz() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "dl_subcarrierSpacing"
+  notes: |
+    The DU encountered an assertion failure during the NR configuration process, specifically when attempting to set the dl_subcarrierSpacing parameter. This parameter is crucial for defining the subcarrier spacing used in the NR configuration, as detailed in the 3GPP TS 38.331 specification. The assertion error indicates that the value assigned to dl_subcarrierSpacing (-1) is not within the acceptable range of values as per the NR configuration tables. This could be due to a misconfiguration or an incorrect reference to the NR configuration tables. The CU's Active_gNBs configuration is not directly related to this failure, as it pertains to the DU's NR configuration capabilities. To correct this issue, the dl_subcarrierSpacing value should be verified and set to a valid value that complies with the NR specification, ensuring that the DU can successfully initialize and configure the NR parameters.
+
+- stage: du_init
+  type: DU
+  symptom: "Assertion failure in NR configuration due to invalid dl_subcarrierSpacing"
+  log_snippet:
+    - "Assertion (bw_index >= 0 && bw_index <= (sizeof(bandwidth_index_to_mhz)/sizeof(*(bandwidth_index_to_mhz)))) failed!"
+    - "Bandwidth index -1 is invalid"
+    - "../../../common/utils/nr/nr_common.c:398 get_supported_bw_mhz() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "dl_subcarrierSpacing"
+  notes: |
+    The DU's initialization process was interrupted due to an assertion failure related to the dl_subcarrierSpacing parameter. This parameter is part of the NR configuration, which defines the subcarrier spacing for the downlink (DL) channel. The assertion failure message indicates that the value of dl_subcarrierSpacing was set to -1, which is not a valid index for the bandwidth configuration. According to the NR configuration tables referenced in the 3GPP TS 38.331 specification, dl_subcarrierSpacing must be assigned a valid index that corresponds to the supported bandwidth values. The failure of this assertion suggests that the DU's NR configuration is not correctly referencing the supported bandwidth values, leading to an invalid configuration attempt. The CU's Active_gNBs configuration is not directly implicated in this failure, as it pertains to the DU's ability to correctly configure the NR parameters. To address this issue, the dl_subcarrierSpacing value must be checked and corrected to ensure it corresponds to a valid bandwidth index as defined in the NR configuration tables, allowing the DU to complete its initialization process successfully.

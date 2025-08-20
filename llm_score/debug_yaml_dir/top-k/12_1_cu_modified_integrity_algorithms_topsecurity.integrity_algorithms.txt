@@ -1,0 +1,44 @@
+🔹 Match 1 from [38463-gf0] (Score: 0.5813)
+🔹 Match 2 from [38463-gf0] (Score: 0.6316)
+🔹 Match 3 from [38473-gf0] (Score: 0.6447)
+
+[From 38463-gf0]:
+9.2.1.15 GNB-CU-CP CONFIGURATION UPDATE FAILURE 60
+
+9.2.1.16 E1 RELEASE REQUEST 61
+
+9.2.1.17 E1 RELEASE RESPONSE 61
+
+9.2.1.18 GNB-CU-UP STATUS INDICATION 61
+
+9.2.1.19 RESOURCE STATUS REQUEST 61
+
+9.2.1.20 RESOURCE STATUS RESPONSE 62
+
+9.2.1.21 RESOURCE STATUS FAILURE 63
+
+---
+
+[From 38463-gf0]:
+Figure 8.2.6.3-1: gNB-CU-CP Configuration Update procedure: Unsuccessful Operation.
+
+If the gNB-CU-UP cannot accept the update, it shall respond with a GNB-CU-CP CONFIGURATION UPDATE FAILURE message and appropriate cause value.
+
+---
+
+[From 38473-gf0]:
+--
+
+-- GNB-CU CONFIGURATION UPDATE ELEMENTARY PROCEDURE
+
+--
+
+-- **************************************************************
+
+-- **************************************************************
+
+--
+
+-- GNB-CU CONFIGURATION UPDATE
+
+--

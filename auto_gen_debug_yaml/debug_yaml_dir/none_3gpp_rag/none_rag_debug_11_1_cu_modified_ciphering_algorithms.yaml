@@ -1,0 +1,9 @@
+- stage: cu_init
+  type: CU
+  symptom: Missing security ciphering algorithms
+  log_snippet:
+    - "No error log from CU"
+  related_config:
+    - security.ciphering_algorithms
+  notes: |
+    In the CU initialization stage, the absence of security ciphering algorithms can lead to a failure in establishing a secure connection with the DU. According to 3GPP TS 38.331, the CU must select a ciphering algorithm for securing the communication between the CU and DU. The lack of this configuration can result in a failure to reach a secure state, although this may not always produce a log error. In this case, the absence of the security.ciphering_algorithms parameter in the configuration file caused the failure. The DU should not be able to establish a secure connection with the CU, leading to a potential fallback to an insecure connection or a connection failure. This could also be due to the CU not being able to select a ciphering algorithm from the available options, which is a requirement as per 3GPP TS 38.401. However, since there is no error log, it's possible that the CU's attempt to initialize the DU without the ciphering algorithm is silently failing, or the issue is not related to the ciphering algorithms but to another aspect of the configuration that is not showing up in the error log. Further investigation into the CU's initialization logs or additional configuration parameters might be necessary to identify the root cause.

@@ -1,0 +1,34 @@
+🔹 Match 1 from [38463-gf0] (Score: 0.7268)
+🔹 Match 2 from [38463-gf0] (Score: 0.7276)
+🔹 Match 3 from [38463-gf0] (Score: 0.7285)
+
+[From 38463-gf0]:
+8.2.4.4 Abnormal Conditions 22
+
+8.2.5 gNB-CU-UP Configuration Update 22
+
+8.2.5.1 General 22
+
+8.2.5.2 Successful Operation 23
+
+8.2.5.3 Unsuccessful Operation 24
+
+8.2.5.4 Abnormal Conditions 24
+
+8.2.6 gNB-CU-CP Configuration Update 24
+
+8.2.6.1 General 24
+
+8.2.6.2 Successful Operation 25
+
+---
+
+[From 38463-gf0]:
+Figure 8.2.6.3-1: gNB-CU-CP Configuration Update procedure: Unsuccessful Operation.
+
+If the gNB-CU-UP cannot accept the update, it shall respond with a GNB-CU-CP CONFIGURATION UPDATE FAILURE message and appropriate cause value.
+
+---
+
+[From 38463-gf0]:
+to acknowledge that it successfully updated the configuration data. If an information element is not included in the GNB-CU-CP CONFIGURATION UPDATE message, the gNB-CU-UP shall interpret that the corresponding configuration data is not changed and shall continue to operate with the existing related

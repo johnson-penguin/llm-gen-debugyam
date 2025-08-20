@@ -1,0 +1,10 @@
+- stage: <cu_init>
+  type: <CU>
+  symptom: "Unsuccessful configuration update due to missing parameter."
+  log_snippet:
+    - "..."
+  related_config:
+    - "Active_gNBs"
+    - "security.ciphering_algorithms"
+  notes: |
+    The failure is likely due to the gNB-CU-UP not being able to accept the configuration update because it expects the 'Active_gNBs' and 'security.ciphering_algorithms' parameters to be included in the GNB-CU-CP CONFIGURATION UPDATE message. According to 3GPP TS 38.401, the gNB-CU should send a GNB-CU-CP CONFIGURATION UPDATE message to the gNB-CU, which includes all the necessary configuration parameters. If the CU does not receive the expected parameters, it may not be able to initialize correctly. The absence of an error log from the CU suggests that the failure is due to a configuration issue rather than a runtime error. The OAI module, specifically the f1ap_eNB_start, is responsible for initializing the gNB with the provided configurations. If the required parameters are missing, the initialization may not proceed as expected, leading to an unsuccessful configuration update.

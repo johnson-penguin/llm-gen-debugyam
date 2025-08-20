@@ -1,0 +1,18 @@
+- stage: cu_init
+  type: CU
+  symptom: SCTP connection refused
+  log_snippet:
+    - "[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - Active_gNBs
+  notes: |
+    The failure is likely due to an incorrect SCTP association configuration between the gNB-CU and the gNB-DU. According to 3GPP TS 38.401, the SCTP association is responsible for establishing a connection between the CU and the DU for control plane communication. The failure could be a result of an improper configuration or removal of the old SCTP association before the new one is properly established. The log message indicates that the CU attempted to connect via SCTP but was refused, which suggests that the DU might not be listening on the expected SCTP port or that the association is not correctly configured. The active_gNBs configuration parameter in the CU might have been modified, leading to an invalid or incomplete setup of the SCTP association.
+- stage: cu_init
+  type: CU
+  symptom: SCTP connection refused
+  log_snippet:
+    - "[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - Active_gNBs
+  notes: |
+    The failure is likely due to an incorrect SCTP association configuration between the gNB-CU and the gNB-DU. According to 3GPP TS 38.401, the SCTP association is responsible for establishing a connection between the CU and the DU for control plane communication. The failure could be a result of an improper configuration or removal of the old SCTP association before the new one is properly established. The log message indicates that the CU attempted to connect via SCTP but was refused, which suggests that the DU might not be listening on the expected SCTP port or that the association is not correctly configured. The active_gNBs configuration parameter in the CU might have been modified, leading to an invalid or incomplete setup of the SCTP association.

@@ -1,0 +1,58 @@
+🔹 Match 1 from [38463-gf0] (Score: 0.5276)
+🔹 Match 2 from [38463-gf0] (Score: 0.5682)
+🔹 Match 3 from [38463-gf0] (Score: 0.6030)
+
+[From 38463-gf0]:
+--
+
+-- **************************************************************
+
+IMPORTS
+
+Criticality,
+
+ProcedureCode
+
+FROM E1AP-CommonDataTypes
+
+Reset,
+
+ResetAcknowledge,
+
+ErrorIndication,
+
+GNB-CU-UP-E1SetupRequest,
+
+GNB-CU-UP-E1SetupResponse,
+
+GNB-CU-UP-E1SetupFailure,
+
+GNB-CU-CP-E1SetupRequest,
+
+---
+
+[From 38463-gf0]:
+--
+
+-- GNB-CU-CP E1 Setup Failure
+
+--
+
+-- **************************************************************
+
+GNB-CU-CP-E1SetupFailure ::= SEQUENCE {
+
+protocolIEs ProtocolIE-Container { {GNB-CU-CP-E1SetupFailureIEs} },
+
+...
+
+GNB-CU-CP-E1SetupFailureIEs E1AP-PROTOCOL-IES ::= {
+
+---
+
+[From 38463-gf0]:
+9.2.1.6 GNB-CU-UP E1 SETUP FAILURE
+
+This message is sent by the gNB-CU-CP to indicate E1 Setup failure.
+
+Direction: gNB-CU-CP → gNB-CU-UP

@@ -1,0 +1,13 @@
+- stage: cu_init
+  type: CU
+  symptom: "CU fails to initialize due to invalid PLMN MNC length"
+  log_snippet:
+    - "[CONFIG] config_check_intval: mnc_length: 1 invalid value, authorized values:"
+  related_config:
+    - "plmn_list.mnc_length"
+  notes: |
+    The failure occurs during the initial configuration parsing phase of the CU node startup. The OAI configuration module (`RC.config`) validates the parameters against expected values.
+
+    The root cause is an invalid value for `mnc_length`. According to 3GPP TS 23.003, a PLMN identity consists of a Mobile Country Code (MCC) and a Mobile Network Code (MNC). The MNC length is defined to be either 2 or 3 digits. The provided configuration sets `mnc_length` to 1, which is non-compliant.
+
+    The gNB's configuration parser correctly identifies this as an invalid value and aborts the initialization process before the RRC, NGAP, or F1AP protocol stacks are fully established. This prevents the gNB from attempting to broadcast an invalid PLMN-Id in System Information Block 1 (SIB1).

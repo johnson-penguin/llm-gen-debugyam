@@ -1,0 +1,20 @@
+🔹 Match 1 from [38473-gf0] (Score: 0.8855)
+🔹 Match 2 from [38821-g20] (Score: 0.9876)
+🔹 Match 3 from [38874-g00] (Score: 0.9883)
+
+[From 38473-gf0]:
+8.10.2.B Unsuccessful Operation
+
+Figure 8.10.2.3-1: gNB-DU Resource Configuration procedure: Unsuccessful Operation
+
+If the gNB-DU cannot accept the configuration, it shall respond with a GNB-DU RESOURCE CONFIGURATION FAILURE and appropriate cause value.
+
+---
+
+[From 38821-g20]:
+By this indication, CU2 will not send F1AP UE CONTEXT REQUEST to target DU.
+
+---
+
+[From 38874-g00]:
+target CU via the reconfigured DU.

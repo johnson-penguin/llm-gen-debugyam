@@ -1,0 +1,28 @@
+🔹 Match 1 from [38821-g20] (Score: 0.7472)
+🔹 Match 2 from [38463-gf0] (Score: 0.7578)
+🔹 Match 3 from [38821-g20] (Score: 0.7739)
+
+[From 38821-g20]:
+to adding/removing an SCTP association between the CU and the DU. According to current specifications, this is triggered from the gNB-CU.
+
+---
+
+[From 38463-gf0]:
+9.2.1.15 GNB-CU-CP CONFIGURATION UPDATE FAILURE 60
+
+9.2.1.16 E1 RELEASE REQUEST 61
+
+9.2.1.17 E1 RELEASE RESPONSE 61
+
+9.2.1.18 GNB-CU-UP STATUS INDICATION 61
+
+9.2.1.19 RESOURCE STATUS REQUEST 61
+
+9.2.1.20 RESOURCE STATUS RESPONSE 62
+
+9.2.1.21 RESOURCE STATUS FAILURE 63
+
+---
+
+[From 38821-g20]:
+To use the new NTN Gateway for the SCTP with the current gNB-CU, the satellite/gNB-DU has to use a new IP address that is anchored in the NTN Gateway. The satellite/gNB-DU could use the multiple TNLAs by adding the new SCTP IP address then remove the old SCTP IP address. This may results the

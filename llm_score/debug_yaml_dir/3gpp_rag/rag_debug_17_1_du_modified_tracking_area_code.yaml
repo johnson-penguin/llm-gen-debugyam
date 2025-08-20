@@ -1,0 +1,9 @@
+- stage: du_init
+  type: DU
+  symptom: Invalid tracking area code value
+  log_snippet:
+    - "[CONFIG] config_check_intrange: tracking_area_code: 12312541 invalid value, authorized range: 1 65533"
+  related_config:
+    - tracking_area_code
+  notes: |
+    The failure in the DU initialization phase is due to an invalid value for the tracking area code (TAC) being set. According to 3GPP TS 38.402, the TAC must be within the range of 1 to 65533, as specified in the error log. This issue prevents the DU from correctly identifying its serving cell, which is crucial for establishing a radio link. The root cause is related to the configuration of the DU's tracking area code parameter, which should be checked and corrected to fall within the authorized range. The failure to do so could be due to a misconfiguration during the setup or a misunderstanding of the valid TAC values. The CU, which is responsible for managing the radio resources, will not be able to establish a proper connection with the DU if the TAC is incorrect, leading to a failure in setting up a radio link as defined in TS 25.433. The issue should be resolved by updating the tracking_area_code parameter to a valid value and reinitializing the DU to ensure proper communication with the CU and the serving cell.

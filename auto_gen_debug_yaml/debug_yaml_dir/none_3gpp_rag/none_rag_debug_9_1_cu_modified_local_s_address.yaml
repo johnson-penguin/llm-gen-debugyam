@@ -1,0 +1,14 @@
+- stage: cu_init
+  type: CU
+  symptom: "CU fails to initialize GTP-U interface (N3) due to invalid local IP address/hostname."
+  log_snippet:
+    - "getaddrinfo() failed: Name or service not known"
+    - "[GTPU]   getaddrinfo error: Name or service not known"
+  related_config:
+    - "local_s_address"
+  notes: |
+    The failure occurs during the gNB-CU initialization phase, specifically when setting up the GTP-U (GPRS Tunneling Protocol - User Plane) stack. The GTP-U protocol is responsible for tunneling user data over the N3 interface between the gNB-CU-UP and the 5G Core's UPF (User Plane Function).
+
+    The configuration parameter `local_s_address` under the `gtpu` section is intended to specify the local IP address that the CU's N3 interface will bind to. The error log `getaddrinfo() failed: Name or service not known` indicates that the value provided for this parameter is not a valid IP address or a resolvable hostname.
+
+    This transport network layer configuration error prevents the GTP-U socket from being created, causing a fatal assertion failure and preventing the CU from starting up. The CU cannot establish a user plane path to the core network without a functional N3 interface.

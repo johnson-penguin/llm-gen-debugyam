@@ -1,0 +1,29 @@
+- stage: du_init
+  type: DU
+  symptom: SCTP connection refused
+  log_snippet:
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - remote_n_address
+  notes: |
+    The DU (Distributed Unit) failed to establish a connection via SCTP to the CU (Central Unit) due to a connection refusal error. This issue may be related to the remote N address configuration in the DU's setup. According to the 3GPP TS 38.401 specification, the SCTP connection establishment process requires proper configuration of the TNL address and the SCTP IP address. The failure could be due to an incorrect or unreachable SCTP IP address being used by the DU. The config difference shows that the remote_n_address parameter in the DU configuration is different from the working setup, which could indicate that the SCTP IP address is not properly configured or is not reachable by the DU. This issue affects the RLC (Radio Link Control) layer, as SCTP is used for reliable data transfer between the CU and DU.
+
+- stage: du_init
+  type: DU
+  symptom: SCTP connection refused
+  log_snippet:
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - remote_n_address
+  notes: |
+    The DU's failure to establish an SCTP connection with the CU is likely due to a misconfiguration of the SCTP IP address or a network issue preventing the DU from reaching the CU. The SCTP protocol is used for reliable communication between the CU and DU, as specified in the 3GPP TS 38.401 standard. The error message "Connection refused" suggests that the SCTP connection attempt was unsuccessful, which could be due to the DU using an incorrect SCTP IP address, the CU not being reachable from the DU's network, or a firewall blocking the connection. The config difference indicates that the remote_n_address parameter in the DU's configuration may not match the expected value, leading to the connection refusal. This issue affects the RLC layer, which is responsible for ensuring reliable data transfer between the CU and DU.
+
+- stage: du_init
+  type: DU
+  symptom: SCTP connection refused
+  log_snippet:
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - remote_n_address
+  notes: |
+    The DU's inability to establish an SCTP connection with the CU is indicative of a configuration issue or a network connectivity problem. The SCTP protocol, as described in the 3GPP TS 38.401 standard, is used for establishing a reliable connection between the CU and DU. The "Connection refused" error message in the log suggests that the DU is attempting to connect to an SCTP address that is either incorrect, not reachable, or blocked by a firewall. The config difference, which shows a discrepancy in the remote_n_address parameter, could mean that the DU is using an SCTP IP address that does not correspond to the CU or that the CU is not reachable from the DU's network. This issue impacts the RLC layer, which is responsible for the reliable transport of data between the CU and DU. To resolve this issue, the SCTP IP address in the DU's configuration should be verified and corrected if necessary, and network connectivity should be ensured between the DU and CU. Additionally, firewall settings should be checked to ensure that the SCTP traffic is not being blocked.

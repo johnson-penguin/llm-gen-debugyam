@@ -1,0 +1,9 @@
+- stage: du_init
+  type: DU
+  symptom: "Tracking area code out of authorized range"
+  log_snippet:
+    - "config_check_intrange: tracking_area_code: 12312541 invalid value, authorized range: 1 65533"
+  related_config:
+    - "tracking_area_code"
+  notes: |
+    The DU (Distributed Unit) failed to initialize due to an invalid tracking area code value. According to the 3GPP TS 38.331 (RAN Physical Layer), the tracking area code (TAC) is a 13-bit number that uniquely identifies a cell in a 5G NR system. The TAC is used in the cell search process, as defined in 3GPP TS 38.401 (Cell Search), to identify the cell in which the DU should operate. An invalid TAC value, such as 12312541, is outside the allowed range (1 to 65535), which is specified in the 3GPP TS 38.331. This causes the DU to fail its initial configuration check, preventing it from proceeding with further initialization and operation within the RAN. The configuration parameter related to this failure is the "tracking_area_code". The error log indicates that the value provided for the tracking area code is not within the authorized range, leading to the failure of the DU initialization.

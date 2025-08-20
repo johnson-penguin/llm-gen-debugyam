@@ -1,0 +1,17 @@
+- stage: cu_init
+  type: CU
+  symptom: "CU fails to initialize GTP-U interface due to unresolvable hostname"
+  log_snippet:
+    - "getaddrinfo() failed: Name or service not known"
+    - "[GTPU]   getaddrinfo error: Name or service not known"
+    - "Assertion (status == 0) failed!"
+  related_config:
+    - "local_s_address"
+  notes: |
+    The failure occurs during the initialization of the gNB CU process, specifically when setting up the GTP-U (GPRS Tunnelling Protocol - User Plane) stack. The `[GTPU]` tag in the log clearly identifies the affected module.
+
+    The GTP-U protocol is used to create tunnels over the N3 interface between the gNB and the 5G Core's User Plane Function (UPF) for transporting user data. To establish this interface, the gNB must bind a socket to a local IP address.
+
+    The root cause is a misconfiguration in the `local_s_address` parameter within the `GNB_CU_CONFIG` section. This parameter was likely set to a hostname that is not resolvable by the CU's operating system. The `getaddrinfo()` function, a standard system call for resolving hostnames to IP addresses, fails with the error "Name or service not known". This indicates a DNS resolution failure or a missing entry in the local `/etc/hosts` file.
+
+    The OAI code asserts that the network setup must succeed (status == 0). Since `getaddrinfo()` returns a non-zero error code, the assertion fails, and the CU process terminates. This is a transport layer configuration issue that prevents the gNB from establishing its N3 interface endpoint, which is a prerequisite for any subsequent communication with the UPF.

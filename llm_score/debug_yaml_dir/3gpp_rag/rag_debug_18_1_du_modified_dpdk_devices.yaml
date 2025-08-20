@@ -1,0 +1,19 @@
+- stage: du_init
+  type: DU
+  symptom: Failed device attachment
+  log_snippet:
+    - "EAL: Failed to attach device on primary process"
+  related_config:
+    - fhi_72.dpdk_devices
+  notes: |
+    The Device Attach Layer (EAL) failure in the DU initialization process indicates a problem with attaching the specified dpdk device, `fhi_72.dpdk_devices`. This failure could be due to an incorrect configuration or a missing/invalid device in the dpdk device path. According to 3GPP TS 38.401, the DU must successfully attach the device to the primary process for further initialization. The CU's active_gNBs configuration is not directly related to this issue, as the CU's primary role in this context is to send configuration commands, not to attach devices.
+
+- stage: du_init
+  type: DU
+  symptom: Device attachment failure
+  log_snippet:
+    - "EAL: Failed to attach device on primary process"
+  related_config:
+    - fhi_72.dpdk_devices
+  notes: |
+    The failure to attach the device `fhi_72.dpdk_devices` during the DU initialization phase is critical. This issue prevents the DU from proceeding with its initialization tasks. The CU's active_gNBs configuration is not directly involved in this failure, as it pertains to the DU's internal configuration. The DU's inability to attach the device could be due to several reasons, such as incorrect device path, missing device, or incompatible device configuration. The CU should not send further configuration commands until the DU's device attachment issue is resolved.

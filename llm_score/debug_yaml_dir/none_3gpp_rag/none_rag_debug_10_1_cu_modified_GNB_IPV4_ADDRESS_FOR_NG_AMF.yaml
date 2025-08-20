@@ -1,0 +1,9 @@
+- stage: cu_init
+  type: CU
+  symptom: SCTP bind address assignment failure
+  log_snippet:
+    - "[0m[93m[SCTP]   sctp_bindx() SCTP_BINDX_ADD_ADDR failed: errno 99 Cannot assign requested address"
+  related_config:
+    - amf_ip_address.GNB_IPV4_ADDRESS_FOR_NG_AMF
+  notes: |
+    The CU's inability to bind to the specified SCTP address indicates a configuration mismatch or a network-level issue. This failure could be due to an incorrect IP address being provided for the NGAP (Non-3GPP Access) Amf IP address, or the address being already in use or not reachable. According to 3GPP TS 38.331, the CU should be able to obtain an IP address for the NGAP Amf and use it to establish a connection with the DU. The error errno 99 typically suggests that the address is not available or not assignable. This issue is likely related to the "amf_ip_address.GNB_IPV4_ADDRESS_FOR_NG_AMF" configuration parameter, which should be correctly set to an IP address that the CU can use to communicate with the DU. If this parameter is not correctly configured or if the IP address is not available, the CU will fail to establish the necessary connection, leading to the observed error.

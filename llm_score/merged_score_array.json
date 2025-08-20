@@ -1,0 +1,207 @@
+[
+  {
+    "file": "01_modified_Active_gNBs.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "02_modified_Active_gNBs.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "03_modified_Active_gNBs.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "10_modified_gNB_ID.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "12_modified_gNB_ID.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "13_modified_gNB_name.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "15_modified_gNB_name.yaml",
+    "RAG": 17.0,
+    "None-RAG": 3.5
+  },
+  {
+    "file": "16_modified_tracking_area_code.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "17_modified_tracking_area_code.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "18_modified_tracking_area_code.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "19_modified_mcc.yaml",
+    "RAG": 18.5,
+    "None-RAG": 18.5
+  },
+  {
+    "file": "20_modified_mcc.yaml",
+    "RAG": 18.5,
+    "None-RAG": 17.5
+  },
+  {
+    "file": "21_modified_mcc.yaml",
+    "RAG": 18.5,
+    "None-RAG": 17.5
+  },
+  {
+    "file": "25_modified_mnc_length.yaml",
+    "RAG": 18.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "26_modified_mnc_length.yaml",
+    "RAG": 18.5,
+    "None-RAG": 18.5
+  },
+  {
+    "file": "27_modified_mnc_length.yaml",
+    "RAG": 18.5,
+    "None-RAG": 18.5
+  },
+  {
+    "file": "28_modified_sst.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "29_modified_sst.yaml",
+    "RAG": 18.5,
+    "None-RAG": 17.5
+  },
+  {
+    "file": "34_modified_tr_s_preference.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "35_modified_tr_s_preference.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "36_modified_tr_s_preference.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "40_modified_local_s_address.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "41_modified_local_s_address.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "42_modified_local_s_address.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "64_modified_amf_ip_address.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "65_modified_amf_ip_address.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.5
+  },
+  {
+    "file": "66_modified_amf_ip_address.yaml",
+    "RAG": 17.5,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "67_modified_GNB_IPV4_ADDRESS_FOR_NG_AMF.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "68_modified_GNB_IPV4_ADDRESS_FOR_NG_AMF.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "69_modified_GNB_IPV4_ADDRESS_FOR_NG_AMF.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "70_modified_GNB_IPV4_ADDRESS_FOR_NGU.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.5
+  },
+  {
+    "file": "71_modified_GNB_IPV4_ADDRESS_FOR_NGU.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "72_modified_GNB_IPV4_ADDRESS_FOR_NGU.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "76_modified_ciphering_algorithms.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "77_modified_ciphering_algorithms.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "79_modified_integrity_algorithms.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "80_modified_integrity_algorithms.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "82_modified_drb_ciphering.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "84_modified_drb_ciphering.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "85_modified_drb_integrity.yaml",
+    "RAG": 14.0,
+    "None-RAG": 17.0
+  },
+  {
+    "file": "87_modified_drb_integrity.yaml",
+    "RAG": 17.0,
+    "None-RAG": 17.0
+  }
+]

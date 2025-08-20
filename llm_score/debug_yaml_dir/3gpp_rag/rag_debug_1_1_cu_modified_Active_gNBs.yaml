@@ -1,0 +1,15 @@
+- stage: cu_init
+  type: CU
+  symptom: "CU initialization failure due to missing gNB instance definition in the configuration."
+  log_snippet:
+    - "Assertion (RC.nb_nr_inst == 1) failed!"
+    - "Configuration error: RC.nb_nr_inst (0) must equal NUMBER_OF_gNB_MAX (1)."
+    - "../../../openair2/GNB_APP/gnb_config.c:2186 NRRCConfig() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "Active_gNBs"
+  notes: |
+    The root cause is a misconfiguration in the CU's main configuration file. The `Active_gNBs` parameter, which specifies the gNB instances to be activated by the softmodem, is either missing or commented out.
+
+    During the CU initialization sequence, the `NRRCConfig()` function within the OAI gNB application layer (`gnb_config.c`) parses the configuration. It expects to find at least one gNB instance defined under `Active_gNBs`. The number of found instances is stored in the `RC.nb_nr_inst` variable.
+
+    Because no active gNBs were specified, `RC.nb_nr_inst` was set to 0. The code then hits an assertion `(RC.nb_nr_inst == 1)`, which checks if the number of configured instances matches the expected count for the setup. The assertion fails, leading to a fatal error and the termination of the CU process. This failure occurs at the application layer before any 3GPP protocol stacks (like RRC, F1AP, or NGAP) are fully initialized or any over-the-air or backhaul communication can begin.

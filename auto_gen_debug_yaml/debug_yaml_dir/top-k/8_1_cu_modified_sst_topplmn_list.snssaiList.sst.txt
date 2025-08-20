@@ -1,0 +1,22 @@
+🔹 Match 1 from [29002-g40] (Score: 0.6831)
+🔹 Match 2 from [27007-gc0] (Score: 0.7517)
+🔹 Match 3 from [29011-g00] (Score: 0.7527)
+
+[From 29002-g40]:
+This error will indicate that either incoming calls are barred for this MS or that calls are barred due to Operator Determined Barring (see 3GPP TS 22.041 [8] for a definition of this network feature);
+
+CUG Reject;
+
+The value of this error cause will indicate the reason for CUG Reject;
+
+---
+
+[From 27007-gc0]:
+NOTE 3: The numeric error code for \"Last PDN disconnection not allowed (#49)\" is returned when the MT detects an attempt to disconnect the last PDN or the network returns a response message with cause value #49. The numeric error code was changed to 171 in 3GPP Rel‑11.
+
+9.2.2.2.3 Errors for 5GS
+
+---
+
+[From 29011-g00]:
+3GPP TS 29.002 error cause Facility rejected #29 diagnostic field outgoingCallsBarredWithinCUG Outgoing calls barred within the CUG noCUG-Selected No CUG selected unknownCUG-Index Unknown CUG index indexIncompatibleWith RequestedBasicService Index incompatible with requested basic service

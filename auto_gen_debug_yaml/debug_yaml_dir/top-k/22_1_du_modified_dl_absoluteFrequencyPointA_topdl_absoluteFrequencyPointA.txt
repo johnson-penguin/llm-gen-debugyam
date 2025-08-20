@@ -1,0 +1,16 @@
+🔹 Match 1 from [38521-4-ge0] (Score: 0.8035)
+🔹 Match 2 from [25423-g00] (Score: 0.8127)
+🔹 Match 3 from [32405-g00] (Score: 0.8142)
+
+[From 38521-4-ge0]:
+0396 - F Editorial correction to the section 6.2.2.2.2 title 16.9.0 2021-09 RAN#93 R5-215666 0397 - F Update to test coverage across 5G NR architecture options for Demod scenarios 16.9.0 2021-09 RAN#93 R5-215901 0346 1 F Update FR2 RI test configuration update for TS 38.521-4 16.9.0 2021-09 RAN#93
+
+---
+
+[From 25423-g00]:
+the RADIO LINK RECONFIGURATION COMMIT message and the DRNS has detected that the UE has changed to the new configuration. The algorithm in TS 25.214 [10] shall use the minimum value of the parameters N_INSYNC_IND that are configured in the cells supporting the radio links of the RL Set.]
+
+---
+
+[From 32405-g00]:
+Failure causes are defined within TS 25.331 [4].\ \ Each expected RRC message PHYSICAL CHANNEL RECONFIGURATION COMPLETE, RADIO BEARER SETUP COMPLETE, RADIO BEARER RECONFIGURATION COMPLETE, RADIO BEARER RELEASE COMPLETE, TRANSPORT CHANNEL RECONFIGURATION COMPLETE, PHYSICAL CHANNEL RECONFIGURATION

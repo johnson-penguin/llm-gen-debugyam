@@ -1,0 +1,10 @@
+- stage: du_init
+  type: DU
+  symptom: "DU failed to initialize due to an assertion error related to SSB frequency raster alignment."
+  log_snippet:
+    - "Assertion ((freq - 3000000000) % 1440000 == 0) failed!"
+    - "../../../common/utils/nr/nr_common.c:371 check_ssb_raster() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "absoluteFrequencySSB"
+  notes: |
+    The failure is occurring during the DU initialization phase, specifically when the DU is attempting to align its SSB frequency raster with the global NR frequency raster. According to 3GPP TS 38.101-1, the SSB frequency must be positioned on the NR global frequency raster. The assertion error indicates that the calculated frequency, after subtracting 3 GHz and taking modulo 1.44 MHz, does not equal zero, which means the DU's SSB frequency is not correctly aligned with the global raster. This misalignment could be due to a configuration parameter that specifies the SSB frequency incorrectly. The configuration parameter related to this issue is "absoluteFrequencySSB," which should be set to a value that, when processed as described, results in zero modulo 1.44 MHz. This parameter must be carefully managed to ensure proper synchronization between the DU and the NR global frequency raster, which is critical for successful O-RAN operation.

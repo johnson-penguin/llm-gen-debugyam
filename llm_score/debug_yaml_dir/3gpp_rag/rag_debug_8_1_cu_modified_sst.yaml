@@ -1,0 +1,13 @@
+- stage: cu_init
+  type: CU
+  symptom: "CU initialization fails due to an invalid SST value in the configuration."
+  log_snippet:
+    - "[CONFIG] config_check_intrange: sst: 256 invalid value, authorized range: 0 255"
+  related_config:
+    - "plmn_list.snssaiList.sst"
+  notes: |
+    The gNB CU fails to initialize due to an invalid value for the Slice/Service Type (SST) parameter within the S-NSSAI (Single Network Slice Selection Assistance Information) configuration.
+
+    The SST is a fundamental parameter for network slicing, defined in 3GPP TS 23.501. It is an 8-bit unsigned integer, which restricts its valid range to 0-255. The SST is broadcast in SIB1 and is used by the gNB to identify the type of service a network slice provides (e.g., eMBB, URLLC) and to correctly route UE traffic to the appropriate AMF and UPF.
+
+    The log message `[CONFIG] config_check_intrange: sst: 256 invalid value, authorized range: 0 255` clearly indicates that the OAI configuration parser detected a value of `256` for the `sst` parameter, which is outside the 3GPP-specified range. This check occurs during the initial startup and configuration loading phase of the CU. A failure at this stage is critical and aborts the initialization process, preventing the CU from establishing the NGAP interface with the 5G Core or the F1AP interface with the DU.

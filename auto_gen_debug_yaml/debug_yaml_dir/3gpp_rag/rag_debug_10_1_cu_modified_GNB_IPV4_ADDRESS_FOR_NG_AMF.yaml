@@ -1,0 +1,9 @@
+- stage: cu_init
+  type: CU
+  symptom: SCTP bind address assignment failure
+  log_snippet:
+    - "[SCTP] sctp_bindx() SCTP_BINDX_ADD_ADDR failed: errno 99 Cannot assign requested address"
+  related_config:
+    - amf_ip_address.GNB_IPV4_ADDRESS_FOR_NG_AMF
+  notes: |
+    The failure is caused by the inability to assign the requested IP address to the SCTP bind address, which is required for establishing the SCTP connectivity with the AMF. This is a configuration issue where the IP address configured for the AMF in the CU's configuration file (amf_ip_address.GNB_IPV4_ADDRESS_FOR_NG_AMF) is either not reachable or not properly assigned. This issue can occur due to network configuration errors, IP address conflicts, or firewall restrictions. The SCTP protocol operates at the transport layer (Layer 4) of the OSI model, and proper IP address configuration is essential for the NG-RAN node to communicate with the AMF. The 3GPP TS 38.331 specification details the requirements for the RRC connection establishment, including the establishment of the SCTP connection with the AMF. The failure to assign the requested IP address prevents the NG-RAN from initiating the SCTP connectivity, which is a prerequisite for the successful establishment of the NG-C association with the AMF as per 5G-AN responsibilities.

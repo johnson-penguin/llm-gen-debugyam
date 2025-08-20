@@ -1,0 +1,16 @@
+- stage: f1
+  type: CU
+  symptom: "CU rejects DU's F1 SETUP REQUEST due to gNB name mismatch"
+  log_snippet:
+    - "[NR_RRC]   no DU connected or not found for assoc_id 3548: F1 Setup Failed?"
+    - "[NR_RRC]   Triggering E1AP Setup Failure for transac_id 0, assoc_id -1"
+  related_config:
+    - "gNB_name"
+  notes: |
+    The failure occurs during the F1 Application Protocol (F1AP) setup procedure between the gNB-CU and gNB-DU. According to 3GPP TS 38.473, the gNB-DU initiates this procedure by sending an `F1 SETUP REQUEST` message to the gNB-CU.
+
+    In the OAI implementation, the `gNB_name` parameter from the configuration file is used as an identifier for the gNB entity. When the DU sends the `F1 SETUP REQUEST`, it includes information derived from its configuration. The CU, upon receiving this request, validates the sender's identity against its own configured parameters.
+
+    In this case, the `gNB_name` differs between the CU and DU configurations. The CU receives the `F1 SETUP REQUEST` but fails to match the incoming gNB identity with its own. Consequently, the CU's RRC/F1AP layer rejects the association, as indicated by the log message `no DU connected or not found for assoc_id 3548`.
+
+    This F1 interface failure is a prerequisite for other functions. The subsequent `E1AP Setup Failure` is a direct consequence, as the CU cannot proceed to configure its user plane (CU-UP) without a successfully connected DU. To resolve this, the `gNB_name` must be identical in both the CU and DU configuration files.

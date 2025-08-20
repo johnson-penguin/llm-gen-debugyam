@@ -1,0 +1,848 @@
+[
+  {
+    "file": "40_modified_local_s_address.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more structured analysis, with better reference to the relevant 3GPP specifications and a more direct link between the configuration parameters and the observed behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.5,
+        "total": 9.0
+      }
+    }
+  },
+  {
+    "file": "36_modified_tr_s_preference.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a clearer and more concise explanation of the root cause, with a direct link to the relevant 3GPP specification and a clear connection between the missing configuration parameter and the observed system behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 10,
+        "config_relevance": 9,
+        "total": 36
+      }
+    }
+  },
+  {
+    "file": "34_modified_tr_s_preference.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound analysis, referencing specific 3GPP standards and clearly linking configuration parameters to the observed system behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 36
+      },
+      "none_rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 6,
+        "config_relevance": 7,
+        "total": 28
+      }
+    }
+  },
+  {
+    "file": "67_modified_GNB_IPV4_ADDRESS_FOR_NG_AMF.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a clearer and more detailed explanation of the system behavior and configuration relevance, resulting in a higher overall score.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 9,
+        "total": 34
+      }
+    }
+  },
+  {
+    "file": "72_modified_GNB_IPV4_ADDRESS_FOR_NGU.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound interpretation of the logs and error messages, linking them directly to the configuration parameters and referencing the relevant 3GPP specification.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2,
+        "standard_reference": 2,
+        "config_relevance": 2,
+        "total": 9
+      },
+      "none_rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2,
+        "config_relevance": 2,
+        "total": 9
+      }
+    }
+  },
+  {
+    "file": "29_modified_sst.yaml",
+    "winner": "tie",
+    "reason": "Both notes are equally insightful and technically sound, with slight differences in clarity and interpretation.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 9.5
+      }
+    }
+  },
+  {
+    "file": "03_modified_Active_gNBs.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more detailed analysis, with better interpretation of the system behavior and stronger reference to relevant specifications.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 31
+      }
+    }
+  },
+  {
+    "file": "82_modified_drb_ciphering.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more technically sound analysis, with precise references to relevant 3GPP specifications and a direct link between the configuration parameters and the observed system behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 10,
+        "config_relevance": 9,
+        "total": 36
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 6,
+        "standard_reference": 7,
+        "config_relevance": 6,
+        "total": 26
+      }
+    }
+  },
+  {
+    "file": "76_modified_ciphering_algorithms.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more technically sound interpretation of the logs and error messages, with better reference to relevant specifications and a more direct link between configuration parameters and the observed behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 31
+      }
+    }
+  },
+  {
+    "file": "19_modified_mcc.yaml",
+    "winner": "tie",
+    "reason": "Both notes are equally clear, technically sound, and correctly reference the relevant 3GPP standards, with both linking the MCC value issue to the configuration failure.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2,
+        "standard_reference": 2.5,
+        "config_relevance": 2,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 9.5
+      }
+    }
+  },
+  {
+    "file": "69_modified_GNB_IPV4_ADDRESS_FOR_NG_AMF.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a more comprehensive analysis, including a clearer explanation of the system behavior and a stronger emphasis on standard compliance and configuration relevance.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 10,
+        "config_relevance": 9,
+        "total": 36
+      }
+    }
+  },
+  {
+    "file": "28_modified_sst.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more concise explanation of the configuration error and its impact on the system, making it slightly better overall.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 10.0
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.0
+      }
+    }
+  },
+  {
+    "file": "18_modified_tracking_area_code.yaml",
+    "winner": "tie",
+    "reason": "Both notes are equally insightful and technically sound, with slight differences in clarity and interpretation.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.0
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.5,
+        "total": 9.0
+      }
+    }
+  },
+  {
+    "file": "80_modified_integrity_algorithms.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more technically sound interpretation of the logs and error messages, with better reference to relevant 3GPP standards and a more precise link between configuration parameters and the observed behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 6,
+        "standard_reference": 8,
+        "config_relevance": 7,
+        "total": 28
+      }
+    }
+  },
+  {
+    "file": "79_modified_integrity_algorithms.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a clearer and more concise explanation of the failure, with a higher score in standard reference and config relevance, making it the overall better note.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 10,
+        "config_relevance": 9,
+        "total": 36
+      }
+    }
+  },
+  {
+    "file": "66_modified_amf_ip_address.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound analysis, referencing specific 3GPP and O-RAN specifications, and linking configuration parameters more directly to the observed system behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 30
+      }
+    }
+  },
+  {
+    "file": "21_modified_mcc.yaml",
+    "winner": "rag",
+    "reason": "The RAG note is clearer and more concise, providing a direct link between the configuration parameter and the root cause of the failure.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 10.0
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.0,
+        "total": 8.5
+      }
+    }
+  },
+  {
+    "file": "25_modified_mnc_length.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more technically sound interpretation of the logs and configuration, referencing the correct 3GPP TS 24.008 specification and linking the configuration parameter directly to the failure.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 10.0
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.0,
+        "total": 8.5
+      }
+    }
+  },
+  {
+    "file": "68_modified_GNB_IPV4_ADDRESS_FOR_NG_AMF.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a clearer and more direct explanation of the root cause, with precise reference to the relevant 3GPP specification and a strong link between the configuration parameters and the observed behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 10,
+        "config_relevance": 9,
+        "total": 36
+      }
+    }
+  },
+  {
+    "file": "02_modified_Active_gNBs.yaml",
+    "winner": "tie",
+    "reason": "Both notes are equally insightful and technically sound, with slight differences in clarity and interpretation.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 9.5
+      }
+    }
+  },
+  {
+    "file": "71_modified_GNB_IPV4_ADDRESS_FOR_NGU.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more comprehensive analysis, including a direct link between the configuration parameters and the system behavior, as well as a more thorough reference to relevant 3GPP specifications.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.5,
+        "total": 9.0
+      }
+    }
+  },
+  {
+    "file": "64_modified_amf_ip_address.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound analysis, with clear references to specific configuration parameters and their relevance to the observed failure.",
+    "scores": {
+      "rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 36
+      },
+      "none_rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 32
+      }
+    }
+  },
+  {
+    "file": "20_modified_mcc.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a more comprehensive analysis, including the impact on the O-RAN architecture and the CU's connection with the DU, which adds depth to the technical insight.",
+    "scores": {
+      "rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 1,
+        "standard_reference": 2,
+        "config_relevance": 2,
+        "total": 7
+      },
+      "none_rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 2,
+        "standard_reference": 2,
+        "config_relevance": 2,
+        "total": 8
+      }
+    }
+  },
+  {
+    "file": "70_modified_GNB_IPV4_ADDRESS_FOR_NGU.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more comprehensive analysis, including relevant standard references and a more accurate interpretation of the system behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 34
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 7,
+        "total": 30
+      }
+    }
+  },
+  {
+    "file": "65_modified_amf_ip_address.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more comprehensive analysis, with better interpretation of system behavior, stronger reference to relevant 3GPP specifications, and more precise linkage between configuration parameters and log behavior.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 31
+      }
+    }
+  },
+  {
+    "file": "87_modified_drb_integrity.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more structured analysis, with a higher emphasis on standard references and configuration relevance.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 7,
+        "total": 30
+      }
+    }
+  },
+  {
+    "file": "12_modified_gNB_ID.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note provides a more detailed and technically sound interpretation of the system behavior and configuration relevance, making it slightly better overall.",
+    "scores": {
+      "rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 1,
+        "standard_reference": 2,
+        "config_relevance": 2,
+        "total": 7
+      },
+      "none_rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 2,
+        "standard_reference": 2,
+        "config_relevance": 2,
+        "total": 8
+      }
+    }
+  },
+  {
+    "file": "41_modified_local_s_address.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more comprehensive and technically detailed analysis, including specific configuration parameters and their relevance to the system behavior, while also referencing the correct 3GPP standards.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 31
+      }
+    }
+  },
+  {
+    "file": "15_modified_gNB_name.yaml",
+    "winner": "rag",
+    "reason": "The RAG note is clear, technically sound, and references relevant standards, while the None-RAG note is overly verbose and lacks clarity and technical insight.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 2,
+        "System_Behavior_Interpretation": 1,
+        "standard_reference": 1,
+        "config_relevance": 1,
+        "total": 5
+      }
+    }
+  },
+  {
+    "file": "27_modified_mnc_length.yaml",
+    "winner": "rag",
+    "reason": "The RAG note is slightly clearer and more concise, providing a direct link between the configuration parameter and the root cause.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 10.0
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.5,
+        "total": 9.5
+      }
+    }
+  },
+  {
+    "file": "10_modified_gNB_ID.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more structured analysis, with a better interpretation of the system behavior and a more precise reference to the relevant 3GPP specifications.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.0,
+        "config_relevance": 2.5,
+        "total": 9.0
+      }
+    }
+  },
+  {
+    "file": "17_modified_tracking_area_code.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound analysis, with clear references to specific parameters and their roles in the NGAP setup process.",
+    "scores": {
+      "rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 36
+      },
+      "none_rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 32
+      }
+    }
+  },
+  {
+    "file": "84_modified_drb_ciphering.yaml",
+    "winner": "tie",
+    "reason": "Both notes are equally insightful and technically sound, with slight differences in clarity and interpretation.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.0,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 9.5
+      }
+    }
+  },
+  {
+    "file": "13_modified_gNB_name.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more detailed explanation of the E1AP setup failure, with a higher emphasis on the technical interpretation and standard references.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 31
+      }
+    }
+  },
+  {
+    "file": "35_modified_tr_s_preference.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more structured analysis, with a higher emphasis on technical interpretation and standard compliance, making it the overall better note.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 31
+      }
+    }
+  },
+  {
+    "file": "85_modified_drb_integrity.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more comprehensive analysis, with better interpretation of system behavior, stronger reference to standards, and more relevant configuration insights.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 35
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 30
+      }
+    }
+  },
+  {
+    "file": "26_modified_mnc_length.yaml",
+    "winner": "error",
+    "reason": "Failed to parse: ```json\n{\n  \"scores\": {\n    \"rag\": {\n      \"clarity\": 2.5,\n      \"System_Behavior_Interpretation\": 2,\n      \"standard_reference\": 2.5,\n      \"config_relevance\": 2,\n      \"total\": 9.5\n    },\n    \"none_rag\": {\n      \"clarity\": 2,\n      \"System_Behavior_Interpretation\": 2.5,\n      \"standard_reference\": 2.5,\n      \"config_relevance\": 2.5,\n      \"total\": 9.5\n    }\n  },\n  \"winner\": \"tie\",\n  \"reason\": \"Both notes are equally insightful and technically sound, with slight differences in clarity and interpretation.\"\n```",
+    "scores": {}
+  },
+  {
+    "file": "77_modified_ciphering_algorithms.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a clearer and more structured analysis, with a higher emphasis on standard references and configuration relevance.",
+    "scores": {
+      "rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 7,
+        "standard_reference": 9,
+        "config_relevance": 8,
+        "total": 32
+      },
+      "none_rag": {
+        "clarity": 7,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 7,
+        "total": 30
+      }
+    }
+  },
+  {
+    "file": "16_modified_tracking_area_code.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound analysis, referencing specific 3GPP TS 38.331 and TS 38.413 specifications, and clearly links the configuration parameters to the NGAP setup failure.",
+    "scores": {
+      "rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 36
+      },
+      "none_rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 32
+      }
+    }
+  },
+  {
+    "file": "01_modified_Active_gNBs.yaml",
+    "winner": "none_rag",
+    "reason": "The None-RAG note is slightly more concise and directly links the configuration error to the CU's assertion failure, making it technically superior.",
+    "scores": {
+      "rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.0,
+        "standard_reference": 2.5,
+        "config_relevance": 2.0,
+        "total": 9.5
+      },
+      "none_rag": {
+        "clarity": 2.5,
+        "System_Behavior_Interpretation": 2.5,
+        "standard_reference": 2.5,
+        "config_relevance": 2.5,
+        "total": 10.0
+      }
+    }
+  },
+  {
+    "file": "42_modified_local_s_address.yaml",
+    "winner": "rag",
+    "reason": "The RAG note provides a more detailed and technically sound analysis, referencing specific 3GPP TS 38.331 and OAI module behavior, which makes it clearer and more relevant to the configuration issue.",
+    "scores": {
+      "rag": {
+        "clarity": 9,
+        "System_Behavior_Interpretation": 9,
+        "standard_reference": 9,
+        "config_relevance": 9,
+        "total": 36
+      },
+      "none_rag": {
+        "clarity": 8,
+        "System_Behavior_Interpretation": 8,
+        "standard_reference": 8,
+        "config_relevance": 8,
+        "total": 32
+      }
+    }
+  }
+]

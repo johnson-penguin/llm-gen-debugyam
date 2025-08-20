@@ -1,0 +1,13 @@
+- stage: NGAP
+  type: CU
+  symptom: "gNB-CU fails to establish NGAP connection with AMF"
+  log_snippet:
+    - "[NGAP]   Received NG setup failure for AMF... please check your parameters"
+  related_config:
+    - "tracking_area_code"
+  notes: |
+    This failure occurs at the NGAP layer during the gNB-CU initialization. The NGAP protocol, defined in 3GPP TS 38.413, is used for signaling between the gNB and the AMF (Access and Mobility Management Function).
+
+    The root cause is a misconfiguration of the Tracking Area Code (TAC). During the NG Setup procedure, the gNB-CU sends an "NG SETUP REQUEST" message to the AMF. This message includes a list of supported Tracking Area Identities (TAIs), where each TAI is a combination of a PLMN ID and a TAC. The AMF verifies if it is configured to serve the TAIs provided by the gNB.
+
+    If the `tracking_area_code` configured in the gNB does not match any of the TACs the AMF is configured to manage, the AMF rejects the request with an "NG SETUP FAILURE" message. The log snippet directly reflects the reception of this failure message by the gNB's NGAP entity. To resolve this, the `tracking_area_code` in the gNB configuration must be aligned with the AMF's configuration.

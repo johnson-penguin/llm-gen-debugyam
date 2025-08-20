@@ -1,0 +1,24 @@
+🔹 Match 1 from [32405-g00] (Score: 0.8014)
+🔹 Match 2 from [36331-gd0] (Score: 0.8035)
+🔹 Match 3 from [32405-g00] (Score: 0.8095)
+
+[From 32405-g00]:
+Each failed attempt to set up a radio link shall > be considered separately. Failure causes are defined within > TS 25.433 [7].
+
+---
+
+[From 36331-gd0]:
+5.3.10.7 Radio Link Failure Timers and Constants reconfiguration 178
+
+5.3.10.8 Time domain measurement resource restriction for serving cell 179
+
+5.3.10.9 Other configuration 179
+
+5.3.10.10 SCG reconfiguration 182
+
+5.3.10.11 SCG dedicated resource configuration 184
+
+---
+
+[From 32405-g00]:
+Each failed attempt to add a radio link shall be considered separately. Failure causes are defined within TS 25.433 [7].

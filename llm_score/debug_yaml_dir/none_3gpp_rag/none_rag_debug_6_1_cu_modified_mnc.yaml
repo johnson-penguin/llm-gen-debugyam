@@ -1,0 +1,13 @@
+- stage: cu_init
+  type: CU
+  symptom: "Invalid MNC value in PLMN configuration during startup"
+  log_snippet:
+    - "[CONFIG] config_check_intrange: mnc: 1000 invalid value, authorized range: 0 999"
+  related_config:
+    - "plmn_list.mnc"
+  notes: |
+    The failure occurs during the initial configuration parsing stage of the CU (cu_init). The OAI configuration module (`RC.conf`) validates all parameters against their defined constraints before initializing the protocol stacks.
+
+    The parameter `mnc` (Mobile Network Code) is a component of the PLMN (Public Land Mobile Network) identity. The PLMN-Id is a globally unique identifier for a mobile network, composed of a Mobile Country Code (MCC) and an MNC. This identity is critical for cell selection and is broadcast by the RRC layer in System Information Block 1 (SIB1), as specified in 3GPP TS 38.331.
+
+    According to 3GPP TS 23.003, the MNC is either a 2-digit or 3-digit number, meaning its numerical value must be within the range of 0 to 999. The provided configuration specifies an MNC of 1000, which violates this specification. The OAI gNB's configuration parser correctly identifies this as an invalid value via the `config_check_intrange` function and terminates the initialization process. This is a pre-boot sanity check failure, preventing the CU from proceeding to establish F1AP or NGAP connections.

@@ -1,0 +1,10 @@
+- stage: du_init
+  type: DU
+  symptom: Frequency assertion failure during SSB raster check
+  log_snippet:
+    - Assertion ((freq - 3000000000) % 1440000 == 0) failed!
+    - ../../../common/utils/nr/nr_common.c:371 check_ssb_raster() Exiting OAI softmodem: _Assert_Exit_
+  related_config:
+    - absoluteFrequencySSB
+  notes: |
+    The DU initialization process failed due to an assertion error in the SSB raster check function. This error indicates that the absolute frequency value provided in the configuration file does not satisfy the requirement that when subtracted by the initial frequency offset (3000000000) and then divided by the SSB raster spacing (1440000), the remainder must be zero. This is a frequency planning requirement to ensure that the SSB (Sub-Carrier Spacing) raster is correctly aligned for the given absolute frequency. The issue could be related to incorrect configuration of the absoluteFrequencySSB parameter, which should be set to a value that, when processed as described, results in zero remainder. This failure is likely to occur during the DU's setup phase, where it is configuring its radio resources, as indicated by the log snippet referring to the SSB raster check. The relevant 3GPP standard for this behavior is TS 38.331, which defines the requirements for the SSB raster.

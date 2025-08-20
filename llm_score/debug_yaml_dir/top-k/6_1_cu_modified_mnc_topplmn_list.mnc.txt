@@ -1,0 +1,36 @@
+🔹 Match 1 from [28655-g00] (Score: 0.6657)
+🔹 Match 2 from [31124-gd0] (Score: 0.6738)
+🔹 Match 3 from [31124-gd0] (Score: 0.6738)
+
+[From 28655-g00]:
+N/A | | | 3GPP TS 24.008 | | | | [3]. | defaultValue: None | | | | | | | | allowedValues: N/A | | | | | | | | isNullable: False | +----------------------+----------------------+----------------------+ | mnc | Mobile Network Code, | type: Integer | | | MNC (part of the | | | | PLMN Id, Ref. |
+
+---
+
+[From 31124-gd0]:
+MCC & MNC the mobile country and network code (001110)
+
+LAC the location Area Code (0001)
+
+Cell ID Cell Identity Value (0001)
+
+Capability configuration parameters 2
+
+This parameter is optional. If present, the contents shall not be checked.
+
+Coding:
+
+---
+
+[From 31124-gd0]:
+MCC & MNC the mobile country and network code (001110)
+
+LAC the location Area Code (0001)
+
+Cell ID Cell Identity Value (0001)
+
+Capability configuration parameters 2
+
+This parameter is optional. If present, the contents shall not be checked.
+
+Coding:

@@ -1,0 +1,15 @@
+- stage: cu_init
+  type: CU
+  symptom: "Invalid Mobile Country Code (MCC) value in CU configuration"
+  log_snippet:
+    - "[CONFIG] config_check_intrange: mcc: 1000 invalid value, authorized range: 0 999"
+  related_config:
+    - "plmn_list.mcc"
+  notes: |
+    The gNB-CU initialization failed due to an invalid value for the Mobile Country Code (MCC) in the configuration file.
+
+    The MCC is a component of the Public Land Mobile Network (PLMN) identity, which is broadcast by the gNB in System Information Block 1 (SIB1) as part of the PLMN-IdentityInfo IE. According to ITU-T recommendation E.212 and 3GPP TS 23.003, the MCC is a 3-digit code, which restricts its value to the range 000-999.
+
+    The OAI configuration parser enforces this constraint during startup. The log message `config_check_intrange: mcc: 1000 invalid value, authorized range: 0 999` clearly shows that the provided value of 1000 is outside the permissible range.
+
+    This failure occurs at the RRC configuration stage within the CU, as the RRC layer is responsible for managing system information. An invalid MCC prevents the gNB from forming a valid PLMN ID, leading to an initialization halt. Correcting the `plmn_list.mcc` parameter to a valid 3-digit number is required to resolve this issue.

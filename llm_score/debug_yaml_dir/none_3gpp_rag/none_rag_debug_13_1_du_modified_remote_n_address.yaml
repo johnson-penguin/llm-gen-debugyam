@@ -1,0 +1,11 @@
+- stage: du_init
+  type: DU
+  symptom: "SCTP connection refused during DU initialization"
+  log_snippet:
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+    - "[0m[1;31m[SCTP]   Connect failed: Connection refused"
+  related_config:
+    - "remote_n_address"
+  notes: |
+    In the O-RAN architecture, the DU (Distributed Unit) must establish a connection with the CU (Centralized Unit) using SCTP (Stream Control Transmission Protocol) for control plane communication. The failure to connect is indicated by the SCTP connection refused error in the logs. This issue could be related to the `remote_n_address` configuration, which specifies the address of the CU. If the `remote_n_address` is incorrect or the CU is not reachable, the DU will not be able to establish a connection, leading to a failure in initialization. This could be due to incorrect IP addressing, network segmentation, or firewall rules blocking the communication between the DU and CU. According to 3GPP TS 38.401, the initial connection setup between the DU and CU is critical for the establishment of the gNB's control plane, and any failure in this step will prevent the DU from starting up properly.

@@ -1,0 +1,18 @@
+- stage: cu_init
+  type: CU
+  symptom: Configuration validation failure
+  log_snippet:
+    - "RRC [0] in configuration file, bad drb_integrity value 'true', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_integrity"
+  notes: |
+    The failure is caused by an incorrect value for the `drb_integrity` configuration parameter in the CU. According to 3GPP TS 38.331, which defines the RAN Control Plane (RANCP) protocols, the `drb_integrity` parameter is used to ensure the integrity of the DRB (Distributed RAN Control Plane) messages. The value of this parameter must be either 'yes' or 'no'. The error log indicates that the value 'true' was provided, which is not a valid option for this parameter. This discrepancy leads to a configuration validation failure during the CU initialization phase, preventing the CU from starting up properly. The root cause is the misconfiguration of the `drb_integrity` parameter in the configuration file.
+- stage: cu_init
+  type: CU
+  symptom: Configuration validation failure
+  log_snippet:
+    - "RRC [0] in configuration file, bad drb_integrity value 'true', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_integrity"
+  notes: |
+    The failure is caused by an incorrect value for the `drb_integrity` configuration parameter in the CU. According to 3GPP TS 38.331, which defines the RAN Control Plane (RANCP) protocols, the `drb_integrity` parameter is used to ensure the integrity of the DRB (Distributed RAN Control Plane) messages. The value of this parameter must be either 'yes' or 'no'. The error log indicates that the value 'true' was provided, which is not a valid option for this parameter. This discrepancy leads to a configuration validation failure during the CU initialization phase, preventing the CU from starting up properly. The root cause is the misconfiguration of the `drb_integrity` parameter in the configuration file.

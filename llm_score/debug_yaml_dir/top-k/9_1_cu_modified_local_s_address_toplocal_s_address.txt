@@ -1,0 +1,28 @@
+🔹 Match 1 from [29060-g10] (Score: 0.7985)
+🔹 Match 2 from [29060-g10] (Score: 0.8479)
+🔹 Match 3 from [27007-gc0] (Score: 0.8609)
+
+[From 29060-g10]:
+11.1.13 Incorrect Optional Information Elements 178
+
+11.2 Path Failure 178
+
+11.3 MS Detach 178
+
+11.4 Restoration and Recovery 178
+
+12 Security provided to GTP Communication over Gn and Gp Interfaces 178
+
+13 IP, The Networking Technology used by GTP 179
+
+13.1 IP Version 179
+
+---
+
+[From 29060-g10]:
+| #30 \"Activation rejected by | | | GGSN, Serving GW or PDN GW\" | | | | | | #38 \"Network failure\" | | | | | | #43 \"Unknown PDP Context\" | +----------------------------------+----------------------------------+ | #211 \"All dynamic PDP | #26 \"Insufficient resources\" | | addresses are
+
+---
+
+[From 27007-gc0]:
+209 Information element non-existent or not implemented (#99)\ 210 N1 mode not allowed (#27)\ 211 Restricted service area (#28)\ 212 LADN not available (#43)\ 214 ngKSI already in use (#71)\ 215 Payload was not forwarded (#90)\ 216 Non-3GPP access to 5GCN not allowed (#72)\ 217 Serving network not

@@ -1,0 +1,14 @@
+- stage: f1_init
+  type: CU
+  symptom: Configuration update failure
+  log_snippet:
+    - "No error log from CU"
+  related_config:
+    - "Active_gNBs"
+    - "security.integrity_algorithms"
+  notes: |
+    The failure in the CU configuration update process may be due to an issue with the configuration parameters related to Active_gNBs and security.integrity_algorithms. Since there is no error log from the CU, we need to investigate the configuration differences and the OAI/O-RAN behavior more closely.
+
+    According to the 3GPP TS 38.331, the RAN Control Plane (RAN CP) is responsible for the configuration of the gNB, including the setting of active gNBs and security algorithms. The failure could be related to an incorrect value or format in the configuration parameters, or an incompatibility between the CU and DU configurations. It is also possible that the OAI's configuration management module (e.g., RCconfig_nr_macrlc) is not properly handling the configuration update.
+
+    To resolve this issue, we need to ensure that the configuration parameters are correctly formatted and compatible between the CU and DU. Additionally, we should verify that the OAI's configuration management module is correctly processing the configuration update request. If the problem persists, further investigation into the OAI's behavior during the configuration update process may be necessary.

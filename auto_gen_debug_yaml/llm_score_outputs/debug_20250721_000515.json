@@ -1,0 +1,8 @@
+[
+  {
+    "entry_index": 0,
+    "score": 9,
+    "comment": "The diagnosis is technically accurate, referencing the 3GPP standard and correctly identifying the cause of the failure. The log snippet and related config are well explained, and the notes provide a clear understanding of the issue. A minor improvement could be to explicitly mention the potential impact on the system or the steps needed to resolve the issue.",
+    "symptom": "Invalid maxMIMO_layers configuration"
+  }
+]

@@ -1,0 +1,19 @@
+- stage: cu_init
+  type: CU
+  symptom: "DRB Integrity check failure during CU initialization"
+  log_snippet:
+    - "RRC in configuration file, bad drb_integrity value 'true', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_integrity"
+  notes: |
+    In the context of 5G NR and O-RAN, the CU (Central Unit) undergoes an initialization process that includes the Radio Resource Control (RRC) layer configuration. The DRB (Data Radio Bearer) Integrity check is a security measure to ensure the integrity of the data radio bearer. According to 3GPP TS 38.331, the DRB Integrity check must be set to either 'yes' or 'no'. The error log indicates that the configuration file specifies 'true' for the `security.drb_integrity` parameter, which is not a valid value as per the specification. This mismatch causes the DRB Integrity check to fail, preventing the CU from initializing properly. The root cause is the incorrect configuration value for the DRB Integrity check.
+
+- stage: cu_init
+  type: CU
+  symptom: "DRB Integrity check failure during CU initialization"
+  log_snippet:
+    - "RRC in configuration file, bad drb_integrity value 'true', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_integrity"
+  notes: |
+    In the context of 5G NR and O-RAN, the CU (Central Unit) undergoes an initialization process that includes the Radio Resource Control (RRC) layer configuration. The DRB (Data Radio Bearer) Integrity check is a security measure to ensure the integrity of the data radio bearer. According to 3GPP TS 38.331, the DRB Integrity check must be set to either 'yes' or 'no'. The error log indicates that the configuration file specifies 'true' for the `security.drb_integrity` parameter, which is not a valid value as per the specification. This mismatch causes the DRB Integrity check to fail, preventing the CU from initializing properly. The root cause is the incorrect configuration value for the DRB Integrity check.

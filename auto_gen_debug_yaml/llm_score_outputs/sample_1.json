@@ -1,0 +1,8 @@
+[
+  {
+    "entry_index": 0,
+    "score": 9,
+    "comment": "The diagnosis is technically accurate, with a clear explanation of the issue and its relation to the O-RAN architecture. It correctly identifies the problem with the `maxMIMO_layers` configuration and provides a proper solution. The reference to 3GPP TS 38.214 is appropriate, and the explanation of the role of the DU in O-RAN is clear. The only minor improvement could be to add a brief explanation of what `tot_ant` represents, but this does not detract from the overall quality of the entry.",
+    "symptom": "Invalid maxMIMO_layers configuration"
+  }
+]

@@ -1,0 +1,19 @@
+- stage: cu_init
+  type: CU
+  symptom: Invalid DRB ciphering configuration value
+  log_snippet:
+    - "[RRC]   in configuration file, bad drb_ciphering value 'YES', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_ciphering"
+  notes: |
+    The failure occurred during the CU initialization process where the DRB ciphering configuration parameter was incorrectly set to 'YES'. According to 3GPP TS 38.331, Section 5.4.2, the allowed values for the DRB ciphering configuration are 'yes' or 'no'. The configuration file difference shows that the active_gNBs parameter was modified, but the security.drb_ciphering parameter was set to an invalid value. This is likely due to a misconfiguration or a typo during the setup process. The DRB ciphering configuration is part of the RRC layer, which is responsible for the radio resource control and security settings for the CU.
+
+- stage: cu_init
+  type: CU
+  symptom: Invalid DRB ciphering configuration value
+  log_snippet:
+    - "[RRC]   in configuration file, bad drb_ciphering value 'YES', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_ciphering"
+  notes: |
+    The failure occurred during the CU initialization process where the DRB ciphering configuration parameter was incorrectly set to 'YES'. According to 3GPP TS 38.331, Section 5.4.2, the allowed values for the DRB ciphering configuration are 'yes' or 'no'. The configuration file difference shows that the active_gNBs parameter was modified, but the security.drb_ciphering parameter was set to an invalid value. This is likely due to a misconfiguration or a typo during the setup process. The DRB ciphering configuration is part of the RRC layer, which is responsible for the radio resource control and security settings for the CU.

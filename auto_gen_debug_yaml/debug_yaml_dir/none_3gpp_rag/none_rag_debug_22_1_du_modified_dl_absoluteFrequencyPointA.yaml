@@ -1,0 +1,21 @@
+- stage: du_init
+  type: DU
+  symptom: Frequency point assertion failure
+  log_snippet:
+    - "Assertion (nrarfcn >= N_OFFs) failed!"
+    - "../../../common/utils/nr/nr_common.c:664 from_nrarfcn() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - dl_absoluteFrequencyPointA
+  notes: |
+    The DU initialization process failed due to an assertion error in the frequency point assignment. According to 3GPP TS 38.331, the DU must ensure that the frequency points used for the downlink absolute frequency are within the allowed range defined by N_OFFs. The error log indicates that the assigned dl_absoluteFrequencyPointA is outside of this range, leading to the assertion failure. This issue is related to the configuration of the frequency point for the DU, specifically the dl_absoluteFrequencyPointA parameter. The failure in this step prevents the DU from properly initializing and participating in the O-RAN architecture, affecting the overall network performance and reliability. To resolve this issue, the configuration file should be checked to ensure that the dl_absoluteFrequencyPointA parameter is set to a valid value within the allowed range.
+
+- stage: du_init
+  type: DU
+  symptom: Frequency point assertion failure
+  log_snippet:
+    - "Assertion (nrarfcn >= N_OFFs) failed!"
+    - "../../../common/utils/nr/nr_common.c:664 from_nrarfcn() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - dl_absoluteFrequencyPointA
+  notes: |
+    The DU initialization process failed due to an assertion error in the frequency point assignment. According to 3GPP TS 38.331, the DU must ensure that the frequency points used for the downlink absolute frequency are within the allowed range defined by N_OFFs. The error log indicates that the assigned dl_absoluteFrequencyPointA is outside of this range, leading to the assertion failure. This issue is related to the configuration of the frequency point for the DU, specifically the dl_absoluteFrequencyPointA parameter. The failure in this step prevents the DU from properly initializing and participating in the O-RAN architecture, affecting the overall network performance and reliability. To resolve this issue, the configuration file should be checked to ensure that the dl_absoluteFrequencyPointA parameter is set to a valid value within the allowed range.

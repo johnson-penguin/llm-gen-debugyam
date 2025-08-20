@@ -1,0 +1,11 @@
+- stage: cu_init
+  type: CU
+  symptom: "gNB_ID not found in configuration"
+  log_snippet:
+    - "Assertion (config_isparamset(gnbParms, 0)) failed!"
+    - "gNB_ID is not defined in configuration file"
+    - "../../../openair2/E1AP/e1ap_setup.c:132 RCconfig_NR_CU_E1() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "gNB_ID"
+  notes: |
+    The failure occurred during the CU initialization phase when the gNB_ID parameter was missing from the configuration file. According to 3GPP TS 38.401, which details the O-RAN architecture and interfaces, the gNB_ID is a crucial identifier for the gNB (gNodeB). Without this identifier, the CU cannot properly initialize and establish a connection with the DU. The error logs indicate that the configuration validation failed because the gNB_ID parameter was not set, leading to the termination of the OAI softmodem initialization process as per the OAI module behavior defined in 3GPP TS 38.401.

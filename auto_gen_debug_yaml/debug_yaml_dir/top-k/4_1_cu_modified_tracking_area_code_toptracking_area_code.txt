@@ -1,0 +1,18 @@
+🔹 Match 1 from [38413-ge0] (Score: 0.6683)
+🔹 Match 2 from [38413-ge0] (Score: 0.6710)
+🔹 Match 3 from [38413-ge0] (Score: 0.7155)
+
+[From 38413-ge0]:
+Figure 8.7.1.3-1: NG setup: unsuccessful operation
+
+If the AMF cannot accept the setup, it should respond with an NG SETUP FAILURE message and appropriate cause value.
+
+---
+
+[From 38413-ge0]:
+If the AMF does not identify any of the PLMNs/SNPNs indicated in the NG SETUP REQUEST message, it shall reject the NG Setup procedure with an appropriate cause value.
+
+---
+
+[From 38413-ge0]:
+to O&M intervention. Unknown PLMN or SNPN The AMF does not identify any PLMN or SNPN provided by the NG-RAN node. Unspecified failure Sent when none of the above cause values applies and the cause is not related to any of the categories Radio Network Layer, Transport Network Layer, NAS or Protocol.

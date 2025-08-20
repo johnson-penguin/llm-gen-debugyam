@@ -1,0 +1,21 @@
+- stage: cu_init
+  type: CU
+  symptom: "gNB ID configuration error"
+  log_snippet:
+    - "Assertion (config_isparamset(gnbParms, 0)) failed!"
+    - "gNB_ID is not defined in configuration file"
+  related_config:
+    - "gNB_ID"
+  notes: |
+    The failure occurred during the CU initialization stage, specifically when setting up the E1 interface for the gNB. The error indicates that the gNB ID, which is a critical parameter for identifying and configuring the gNB, is not present in the configuration file. According to the 3GPP TS 38.401 specification, the gNB ID is a mandatory parameter for the Radio Access Network (RAN) to recognize and configure the gNB. The absence of this parameter leads to an assertion failure within the OAI's CU configuration logic, as evidenced by the log snippet. This issue must be resolved by ensuring that the gNB ID is correctly defined in the configuration file before proceeding with the CU initialization.
+
+- stage: cu_init
+  type: CU
+  symptom: "gNB ID missing in configuration"
+  log_snippet:
+    - "Assertion (config_isparamset(gnbParms, 0)) failed!"
+    - "gNB_ID is not defined in configuration file"
+  related_config:
+    - "gNB_ID"
+  notes: |
+    The failure occurred during the CU initialization stage, specifically when setting up the E1 interface for the gNB. The error indicates that the gNB ID, which is a critical parameter for identifying and configuring the gNB, is not present in the configuration file. According to the 3GPP TS 38.401 specification, the gNB ID is a mandatory parameter for the Radio Access Network (RAN) to recognize and configure the gNB. The absence of this parameter leads to an assertion failure within the OAI's CU configuration logic, as evidenced by the log snippet. This issue must be resolved by ensuring that the gNB ID is correctly defined in the configuration file before proceeding with the CU initialization.

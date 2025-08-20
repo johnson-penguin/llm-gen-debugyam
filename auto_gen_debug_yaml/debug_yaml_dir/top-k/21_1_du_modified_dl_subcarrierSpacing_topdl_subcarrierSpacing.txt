@@ -1,0 +1,20 @@
+🔹 Match 1 from [37145-1-ge0] (Score: 0.7943)
+🔹 Match 2 from [29214-g70] (Score: 0.7996)
+🔹 Match 3 from [37145-2-gf0] (Score: 0.8021)
+
+[From 37145-1-ge0]:
+The signal\'s Channel Bandwidth and Subcarrier spacing used to build NR Test Configurations shall be selected according to table 4.11.1a-1.
+
+Table 4.11.1a-1: Signal to be used to build NR TCs
+
+Operating Band characteristics F~DL_high~ -- F~DL_low~ \<100 MHz F~DL_high~ -- F~DL_low~ ≥ 100 MHz
+
+---
+
+[From 29214-g70]:
+| 3 | Extended | O | This feature | | | -BW-E2EQOSMTSI-NR | | indicates the | | | | | support of the | | | | | extended | | | | | E2EQOSMTSI | | | | | bandwidth values | | | | | for NR. It | | | | | requires that | | | | | E2EQOSMTSI | | | | | feature and the | | | | | Extended-Ma | | | | |
+
+---
+
+[From 37145-2-gf0]:
+87. | +-------------+-------------+-------------+-------------+-------------+ | NR Band n89 | 824 - 849 | -40.4 dBm | 1 MHz | This | | | MHz | | | requirement | | | | | | does not | | | | | | apply to | | | | | | UTRA FDD BS | | | | | | operating | | | | | | in band V | | | | | | or XXVI, | | | | |

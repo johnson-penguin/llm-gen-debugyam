@@ -1,0 +1,42 @@
+🔹 Match 1 from [37473-g90] (Score: 0.9317)
+🔹 Match 2 from [21916-g20] (Score: 0.9461)
+🔹 Match 3 from [28541-gh0_AnnexesE_G] (Score: 0.9886)
+
+[From 37473-g90]:
+8.2.5 ng-eNB-CU Configuration Update 21
+
+8.2.5.1 General 21
+
+8.2.5.2 Successful Operation 21
+
+8.2.5.3 Unsuccessful Operation 22
+
+8.2.5.4 Abnormal Conditions 22
+
+8.2.6 ng-eNB-DU Resource Coordination 22
+
+8.2.6.1 General 22
+
+8.2.6.2 Successful Operation 22
+
+8.2.7 ng-eNB-DU Status Indication 23
+
+---
+
+[From 21916-g20]:
+Sync raster: Check mechanisms to avoid overlapping transmissions between NR SSB and LTE CRS. Apply changes to ensure non overlap of NR SSB and LTE CRS if determined that solutions with existing specifications are insufficient [RAN4].
+
+---
+
+[From 28541-gh0_AnnexesE_G]:
+(subcarrier #0) of resource block RB#10 of the SS block. The frequency
+
+must be positioned on the NR global frequency raster, as defined in
+
+3GPP TS 38.101-1, and within bSChannelBwDL.\";
+
+mandatory true;
+
+type int32 { range \"0..3279165\"; }
+
+leaf ssbPeriodicity {

@@ -1,0 +1,16 @@
+🔹 Match 1 from [32405-g00] (Score: 0.6551)
+🔹 Match 2 from [44118-g00] (Score: 0.6632)
+🔹 Match 3 from [32405-g00] (Score: 0.6990)
+
+[From 32405-g00]:
+Failure causes are defined within TS 25.331 [4].\ \ Each expected RRC message PHYSICAL CHANNEL RECONFIGURATION COMPLETE, RADIO BEARER SETUP COMPLETE, RADIO BEARER RECONFIGURATION COMPLETE, RADIO BEARER RELEASE COMPLETE, TRANSPORT CHANNEL RECONFIGURATION COMPLETE, PHYSICAL CHANNEL RECONFIGURATION
+
+---
+
+[From 44118-g00]:
++----------------------------------------------------------------------+ | \< RADIO BEARER RECONFIGURATION FAILURE message content > ::= | | | | { | | | | -- MS information elements | | | | \< RRC Transaction Identifier : \< RRC Transaction Identifier IE | | > > | | | | \< RRC Cause : \< RRC Cause
+
+---
+
+[From 32405-g00]:
+causes are defined within TS 25.331 [4].\ \ Each expected RRC message PHYSICAL CHANNEL RECONFIGURATION COMPLETE, RADIO BEARER SETUP COMPLETE, RADIO BEARER RECONFIGURATION COMPLETE, RADIO BEARER RELEASE COMPLETE, TRANSPORT CHANNEL RECONFIGURATION COMPLETE, PHYSICAL CHANNEL RECONFIGURATION FAILURE,

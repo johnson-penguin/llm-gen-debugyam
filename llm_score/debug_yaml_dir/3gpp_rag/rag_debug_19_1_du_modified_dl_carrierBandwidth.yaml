@@ -1,0 +1,11 @@
+- stage: du_init
+  type: DU
+  symptom: "DU failed to initialize due to an invalid bandwidth index."
+  log_snippet:
+    - "Assertion (bw_index >= 0 && bw_index <= (sizeof(bandwidth_index_to_mhz)/sizeof(*(bandwidth_index_to_mhz)))) failed!"
+    - "Bandwidth index -1 is invalid"
+    - "../../../common/utils/nr/nr_common.c:398 get_supported_bw_mhz() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "dl_carrierBandwidth"
+  notes: |
+    The DU failed to initialize because it received an invalid bandwidth index (-1), which is outside the valid range of indices for supported bandwidths. This issue likely stems from a discrepancy between the configured dl_carrierBandwidth in the DU and the available bandwidths supported by the OAI's NR common library (referenced in nr_common.c). The bandwidth index is used to map the configured bandwidth to the corresponding frequency range and power level requirements. According to 3GPP TS 38.331, the bandwidth index must be within the range of supported indices to ensure the DU can correctly configure its radio resources. The OAI module, specifically the f1ap_eNB_start function, is responsible for initializing the DU with the correct parameters, including the bandwidth index. The failure indicates that the DU's configuration did not match the expected parameters, leading to the assertion failure and subsequent exit from the OAI softmodem initialization process.

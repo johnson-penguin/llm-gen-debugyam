@@ -1,0 +1,10 @@
+- stage: du_init
+  type: DU
+  symptom: "Assertion failure during DU initialization"
+  log_snippet:
+    - "Assertion (nrarfcn >= N_OFFs) failed!"
+    - "../../../common/utils/nr/nr_common.c:664 from_nrarfcn() Exiting OAI softmodem: _Assert_Exit_"
+  related_config:
+    - "dl_absoluteFrequencyPointA"
+  notes: |
+    The failure during the DU initialization phase is indicated by an assertion failure in the NR common utility code. The assertion checks if the absolute frequency point (dl_absoluteFrequencyPointA) is greater than or equal to the lowest absolute frequency point (N_OFFs). This could be due to an incorrect configuration of the DL absolute frequency point, which might be below the minimum allowed value. The root cause is likely related to the configuration of the DU, specifically the dl_absoluteFrequencyPointA parameter, which should comply with the 3GPP TS 38.331 specifications for NR absolute frequency points. The error suggests that the DU was unable to configure its radio frequency (RF) chain to a valid state, leading to the assertion failure and subsequent exit from the OAI softmodem initialization process.

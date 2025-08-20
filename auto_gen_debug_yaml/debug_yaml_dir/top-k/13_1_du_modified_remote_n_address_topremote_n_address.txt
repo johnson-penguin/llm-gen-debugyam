@@ -1,0 +1,24 @@
+🔹 Match 1 from [38821-g20] (Score: 0.8217)
+🔹 Match 2 from [38401-gb0] (Score: 0.8487)
+🔹 Match 3 from [29334-g30] (Score: 0.8575)
+
+[From 38821-g20]:
+To use the new NTN Gateway for the SCTP with the current gNB-CU, the satellite/gNB-DU has to use a new IP address that is anchored in the NTN Gateway. The satellite/gNB-DU could use the multiple TNLAs by adding the new SCTP IP address then remove the old SCTP IP address. This may results the
+
+---
+
+[From 38401-gb0]:
+1. Either the gNB-CU-CP or gNB-CU-UP establishes the first SCTP association with the gNB-CU-UP or gNB-CU-CP respectively using a configured TNL address.
+
+---
+
+[From 29334-g30]:
+5.14.3.24 SCTP basic connection control package (sctpbcc) 50
+
+5.14.3.25 SCTP Re-configuration Stream Reset (sctpreset) 51
+
+5.15 Mandatory support of SDP and Annex C information elements 53
+
+5.16 Optional support of SDP and Annex C information elements 55
+
+5.17 Procedures 59

@@ -1,0 +1,14 @@
+- stage: f1
+  type: CU
+  symptom: "CU rejects DU connection, leading to F1 and E1 setup failures."
+  log_snippet:
+    - "[NR_RRC]   no DU connected or not found for assoc_id 3548: F1 Setup Failed?"
+    - "[NR_RRC]   Triggering E1AP Setup Failure for transac_id 0, assoc_id -1"
+  related_config:
+    - "gNB_name"
+  notes: |
+    The failure occurs during the F1 Setup procedure, which establishes the F1-C interface between the gNB-CU and gNB-DU. The DU initiates this by sending an F1 SETUP REQUEST message to the CU.
+
+    In the OAI implementation, the `gNB_name` parameter is used by the CU's RRC layer to identify and match an incoming F1 connection request from a DU to a pre-configured gNB instance. If the `gNB_name` in the CU's configuration file does not match the name configured in the connecting DU, the CU cannot find a corresponding DU context.
+
+    As a result, the CU's RRC layer rejects the association, leading to the `F1 Setup Failed` log message. The subsequent `E1AP Setup Failure` is a cascading effect. The E1 interface, which connects the CU-CP and CU-UP, cannot be established because the CU-CP has failed to initialize its F1 context and is therefore not in a ready state to communicate with the CU-UP. This entire process is part of the gNB startup sequence as defined by 3GPP TS 38.401.

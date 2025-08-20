@@ -1,0 +1,15 @@
+- stage: NGAP
+  type: CU
+  symptom: "AMF rejected the gNB's NG Setup Request."
+  log_snippet:
+    - "[NGAP]   Received NG setup failure for AMF... please check your parameters"
+  related_config:
+    - "tracking_area_code"
+  notes: |
+    The failure occurs during the NG Setup procedure, which establishes the N2 interface connection between the gNB (CU-CP) and the AMF in the 5G Core.
+
+    The gNB initiates this procedure by sending an `NG SETUP REQUEST` message to the AMF. This message contains essential gNB information, including a list of supported Tracking Area Identities (TAIs). A TAI is a combination of a PLMN ID and a Tracking Area Code (TAC).
+
+    As per 3GPP TS 38.413, the AMF validates the information from the gNB. If the TAI provided by the gNB is not configured or known by the AMF, it will reject the procedure by sending an `NG SETUP FAILURE` message. The log message `Received NG setup failure for AMF` confirms this outcome.
+
+    The configuration diff shows that the `tracking_area_code` was modified. This incorrect TAC, when combined with the PLMN ID, formed a TAI that was unrecognized by the AMF, leading to the setup rejection. This is a common configuration mismatch between the RAN and the Core Network.

@@ -1,0 +1,13 @@
+- stage: cu_init
+  type: CU
+  symptom: "Invalid S-NSSAI Slice/Service Type (SST) value in CU configuration"
+  log_snippet:
+    - "[CONFIG] config_check_intrange: sst: 256 invalid value, authorized range: 0 255"
+  related_config:
+    - "plmn_list.snssaiList.sst"
+  notes: |
+    The failure occurs during the gNB-CU's initial configuration parsing stage. The root cause is an invalid value for the Slice/Service Type (SST) within the S-NSSAI (Single Network Slice Selection Assistance Information) configuration.
+
+    According to 3GPP TS 23.501, the SST is an 8-bit unsigned integer, which restricts its value to the range of 0 to 255. The configuration file attempts to set the SST to 256, which is outside this valid range.
+
+    The OAI configuration parser (`RC.conf`) performs sanity checks on all parameters before proceeding with protocol stack initialization. The `config_check_intrange` function flags this violation, leading to a fatal error and preventing the CU from starting. This configuration is critical for the RRC layer, as the S-NSSAI list is broadcast to UEs in System Information Block 1 (SIB1) to enable network slice selection. An invalid value here makes the RRC configuration inconsistent with 3GPP specifications, hence the startup is aborted.

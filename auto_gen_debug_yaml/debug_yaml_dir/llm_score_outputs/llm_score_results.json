@@ -1,0 +1,22 @@
+[
+  {
+    "file": "rag_debug_1_cu_gnb_maxmimo_layers.yaml",
+    "entry": 1,
+    "error": "Extra data: line 1 column 5 (char 4)"
+  },
+  {
+    "file": "rag_debug_2_cu_gnb_pdsch_AntennaPorts_larger_than_physical antenna.yaml",
+    "entry": 1,
+    "error": "Extra data: line 1 column 5 (char 4)"
+  },
+  {
+    "file": "rag_debug_3_cu_gnb_invalid_pusch_AntennaPorts.yaml",
+    "entry": 1,
+    "error": "Extra data: line 1 column 5 (char 4)"
+  },
+  {
+    "file": "rag_debug_5_cu_gnb_sib1tda_invalid.yaml",
+    "entry": 1,
+    "error": "Extra data: line 1 column 5 (char 4)"
+  }
+]

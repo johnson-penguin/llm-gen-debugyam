@@ -1,0 +1,15 @@
+[UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch:  Abrev. Hash:  Date: 
+[0m[GNB_APP]   Initialized RAN Context: RC.nb_nr_inst = 1, RC.nb_nr_macrlc_inst = 1, RC.nb_nr_L1_inst = 1, RC.nb_RU = 1, RC.nb_nr_CC[0] = 1
+[0m[NR_PHY]   Initializing gNB RAN context: RC.nb_nr_L1_inst = 1 
+[0m[NR_PHY]   Registered with MAC interface module (0x3e2b090)
+[0m[NR_PHY]   Initializing NR L1: RC.nb_nr_L1_inst = 1
+[0m[NR_PHY]   L1_RX_THREAD_CORE -1 (15)
+[0m[NR_PHY]   TX_AMP = 519 (-36 dBFS)
+[0m[PHY]   No prs_config configuration found..!!
+[0m[CONFIG] config_check_intrange: tracking_area_code: 0 invalid value, authorized range: 1 65533
+[1;31m[ENB_APP]   [CONFIG] config_execcheck: section gNBs.[0] 1 parameters with wrong value
+[0mCMDLINE: "./nr-softmodem" "-O" "/home/oai72/FH_7.2_dev/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/johnson/du_confs/17_3_du_modified_tracking_area_code.conf" "--thread-pool" "9,11,13,15" 
+[CONFIG] function config_libconfig_init returned 0
+../../../common/config/config_userapi.c:102 config_execcheck() Exiting OAI softmodem: exit_fun

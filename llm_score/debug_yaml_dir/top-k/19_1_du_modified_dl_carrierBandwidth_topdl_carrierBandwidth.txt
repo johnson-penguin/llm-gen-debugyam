@@ -1,0 +1,16 @@
+🔹 Match 1 from [37105-ge0] (Score: 0.7182)
+🔹 Match 2 from [36141-gh0] (Score: 0.7238)
+🔹 Match 3 from [37105-ge0] (Score: 0.7291)
+
+[From 37105-ge0]:
+| | | | | | 9.7.6.3.2. | +-------------+-------------+-------------+-------------+-------------+ | NR Band n94 | 1432 - 1517 | -46 dBm | 1 MHz | This | | | MHz | | | requirement | | | | | | does not | | | | | | apply to | | | | | | UTRA FDD BS | | | | | | operating | | | | | | in band XI | | | | |
+
+---
+
+[From 36141-gh0]:
+| | | | | 6.6.4.2. | +-------------+-------------+-------------+-------------+-------------+ | NR Band n82 | 832 -- 862 | -49 dBm | 1 MHz | This | | | MHz | | | requirement | | | | | | does not | | | | | | apply to | | | | | | E-UTRA BS | | | | | | operating | | | | | | in band 20, | | | | | |
+
+---
+
+[From 37105-ge0]:
+| | | | | 9.7.6.3.2. | +-------------+-------------+-------------+-------------+-------------+ | NR Band n92 | 1432 - 1517 | -46 dBm | 1 MHz | This | | | MHz | | | requirement | | | | | | does not | | | | | | apply to | | | | | | UTRA FDD BS | | | | | | operating | | | | | | in band XI | | | | | |

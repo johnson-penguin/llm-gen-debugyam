@@ -1,0 +1,9 @@
+- stage: f1_init
+  type: CU
+  symptom: "DRB ciphering value not accepted"
+  log_snippet:
+    - "[RRC]   in configuration file, bad drb_ciphering value 'YES', only 'yes' and 'no' allowed"
+  related_config:
+    - "security.drb_ciphering"
+  notes: |
+    The failure occurred during the RAN Control Plane (f1ap_eNB_start) initialization phase. The CU (gNB) attempted to set the DRB (Data Radio Bearer) ciphering parameter to 'YES', which is not a valid value according to the 3GPP TS 36.331 specification. The allowed values for DRB ciphering are 'yes' or 'no'. This mismatch in configuration parameters led to the failure. The root cause is the incorrect value provided for the 'security.drb_ciphering' configuration parameter, which should be corrected to 'yes' or 'no' as per the specification.

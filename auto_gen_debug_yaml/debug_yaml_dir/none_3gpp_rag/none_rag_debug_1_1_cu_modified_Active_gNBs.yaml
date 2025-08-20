@@ -1,0 +1,15 @@
+- stage: cu_init
+  type: CU
+  symptom: "CU fails to initialize due to no active gNB instance found in configuration"
+  log_snippet:
+    - "Assertion (config_isparamset(gnbParms, 0)) failed!"
+    - "../../../openair2/E1AP/e1ap_setup.c:132 RCconfig_NR_CU_E1() Exiting OAI softmodem: _Assert_Exit_"
+    - "gNB_ID is not defined in configuration file."
+  related_config:
+    - "Active_gNBs"
+  notes: |
+    The failure occurs during the initial configuration phase of the CU, specifically within the `NRRCConfig()` function responsible for parsing the gNB's RRC (Radio Resource Control) and related parameters.
+
+    The root cause is a misconfiguration of the `Active_gNBs` parameter in the CU's configuration file. This parameter is a list that specifies which gNB instance(s) defined in the configuration file should be initialized. In the failed case, this list is likely empty or commented out.
+
+    Consequently, the OAI configuration parser does not find any gNB instances to load, resulting in the internal variable `RC.nb_nr_inst` (number of NR instances) being set to 0. The gNB application logic, however, has an assertion check that requires at least one gNB instance to be configured (`RC.nb_nr_inst == 1`). This assertion fails, leading to the immediate termination of the CU process. This is a fundamental configuration error that prevents the RRC layer and the entire gNB application from starting up.
