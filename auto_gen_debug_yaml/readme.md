@@ -34,7 +34,7 @@ This project compares **None-RAG** (baseline) and **RAG-enhanced** approaches, w
 
 ---
 ## 📂 Project Structure
-
+```bash=
 📂 Project Root
 ├── 📓 auto_gen_debug_yaml.ipynb   # Main notebook pipeline
 ├── 📂 none_rag_debug_yaml/        # Outputs (baseline YAML)
@@ -43,7 +43,7 @@ This project compares **None-RAG** (baseline) and **RAG-enhanced** approaches, w
 ├── 📂 baseline_conf/              # Reference configs
 ├── 📂 fail_conf/                  # Modified (failure) configs
 └── 📂 log/                        # CU/DU logs
-
+```
 
 ## 🚀 Workflow
 
